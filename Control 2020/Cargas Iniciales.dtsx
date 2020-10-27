@@ -12,8 +12,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Cargas Iniciales"
   DTS:PackageType="5"
-  DTS:VersionBuild="132"
-  DTS:VersionGUID="{A44E15D3-8D62-4DEF-88B4-DF87EC49710F}">
+  DTS:VersionBuild="144"
+  DTS:VersionGUID="{048605F2-EBF3-44BF-8A91-FACA3D146311}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -24,7 +24,7 @@
       DTS:ObjectName="Control_2019">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=cmpc-ds85.cmpc.cl;Initial Catalog=PMO Control Gasto TI 2019;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PMO Control Gasto TI 2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -606,6 +606,21 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OData_Shp]"
+      DTS:CreationName="ODATA"
+      DTS:DTSID="{08CE894B-09CC-4AB0-85E8-A68667D1DB52}"
+      DTS:ObjectName="OData_Shp">
+      <DTS:ObjectData>
+        <ODataConnectionManager
+          UserName=""
+          Url="http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/listdata.svc"
+          ConnectionString="Service Document Url=http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=SSPI;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104"
+          MicrosoftOnlineServicesAuth="False"
+          AuthType="WindowsAuthentication"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Proyectos_Normas]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{42A82DB2-6E39-4517-BC1F-642ED27E4BF3}"
@@ -671,13 +686,30 @@
       <DTS:VariableValue
         DTS:DataType="8">\\sppmo.cmpc.cl\DavWWWRoot\ppto2020\control_dev\Documentos Internos\Carga Cubo\Iniciales</DTS:VariableValue>
     </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8555619E-C5F6-44DC-98D8-2958A23E4A62}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Carga Real"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{02AE2D23-DCA3-4744-907B-B213451CD3CC}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -693,7 +725,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Directo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5422,7 +5454,6 @@
       DTS:refId="Package\Carga Triangulado"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{B58FE6DC-6F6A-4AA7-BF5A-E86918D76109}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -5438,7 +5469,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Filiales"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5616,7 +5647,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nº doc]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Nº doc]"
                               name="Copy of Nº doc"
@@ -5637,7 +5668,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Clave de referencia]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Clave de referencia]"
                               name="Copy of Clave de referencia"
@@ -5658,7 +5689,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Pos]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Pos]"
                               name="Copy of Pos"
@@ -5679,7 +5710,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of  Importe en MD]"
                               dataType="r4"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of  Importe en MD]"
                               name="Copy of  Importe en MD"
                               truncationRowDisposition="FailComponent">
@@ -5699,7 +5730,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of      ImpteML2]"
                               dataType="r4"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of      ImpteML2]"
                               name="Copy of      ImpteML2"
                               truncationRowDisposition="FailComponent">
@@ -5719,7 +5750,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Cuenta]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Cuenta]"
                               name="Copy of Cuenta"
@@ -5740,7 +5771,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Texto]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="255"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Texto]"
                               name="Copy of Texto"
@@ -5761,7 +5792,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Orden]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Orden]"
                               name="Copy of Orden"
@@ -5782,7 +5813,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Elemento PEP]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Elemento PEP]"
                               name="Copy of Elemento PEP"
@@ -5803,7 +5834,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Centro coste]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Centro coste]"
                               name="Copy of Centro coste"
@@ -5824,7 +5855,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mon]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Mon]"
                               name="Copy of Mon"
@@ -5845,7 +5876,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Acreedor]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Acreedor]"
                               name="Copy of Acreedor"
@@ -5866,7 +5897,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Doc compr]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Doc compr]"
                               name="Copy of Doc compr"
@@ -5887,7 +5918,7 @@
                               refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Usuario]"
                               dataType="wstr"
                               errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
+                              errorRowDisposition="RedirectRow"
                               length="50"
                               lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Usuario]"
                               name="Copy of Usuario"
@@ -5930,6 +5961,36 @@
                           <externalMetadataColumns />
                         </output>
                       </outputs>
+                    </component>
+                    <component
+                      refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Destino de conjunto de registros"
+                      componentClassID="Microsoft.RecordsetDestination"
+                      contactInfo="Destino de conjunto de registros;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+                      description="Crea y rellena un conjunto de registros ADO en memoria que está disponible fuera del flujo de datos. Los scripts y otros elementos de paquete pueden usar el conjunto de registros. Por ejemplo, se usa un conjunto de registros para almacenar el nombre de los archivos que se van a cargar en el almacenamiento de datos."
+                      name="Destino de conjunto de registros">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la variable que contiene el conjunto de registros."
+                          name="VariableName">User::Variable</property>
+                      </properties>
+                      <inputs>
+                        <input
+                          refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Destino de conjunto de registros.Inputs[Entrada de destino de conjunto de registros]"
+                          hasSideEffects="true"
+                          name="Entrada de destino de conjunto de registros">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Destino de conjunto de registros.Inputs[Entrada de destino de conjunto de registros].Columns[Column 0]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Column 0"
+                              lineageId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Lee Archivo Filial.Outputs[Flat File Source Output].Columns[Column 0]" />
+                          </inputColumns>
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
                     </component>
                     <component
                       refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Graba Real Filial"
@@ -10195,6 +10256,11 @@ order by
                       name="Ceco"
                       startId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\¿Proyectos?.Outputs[Ceco]" />
                     <path
+                      refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Data Conversion Error Output]"
+                      endId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Destino de conjunto de registros.Inputs[Entrada de destino de conjunto de registros]"
+                      name="Data Conversion Error Output"
+                      startId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion.Outputs[Data Conversion Error Output]" />
+                    <path
                       refId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Data Conversion Output]"
                       endId="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\id y nulos.Inputs[Derived Column Input]"
                       name="Data Conversion Output"
@@ -10271,53 +10337,15 @@ order by
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Directo por cada Archivo"
-      DTS:CreationName="STOCK:FOREACHLOOP"
-      DTS:Description="Carga archivos históricos de gasto real"
-      DTS:Disabled="True"
-      DTS:DTSID="{7F8B2C8F-5C33-4F02-B288-6D930AD8C4E8}"
-      DTS:ExecutableType="STOCK:FOREACHLOOP"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Directo por cada Archivo">
-      <DTS:ForEachEnumerator
-        DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{0818E2B9-5DC3-4C08-AE09-672114327AB7}"
-        DTS:ObjectName="{0818E2B9-5DC3-4C08-AE09-672114327AB7}">
-        <DTS:ObjectData>
-          <ForEachFileEnumeratorProperties>
-            <FEFEProperty
-              Folder="" />
-            <FEFEProperty
-              FileSpec="*.txt" />
-            <FEFEProperty
-              FileNameRetrievalType="0" />
-            <FEFEProperty
-              Recurse="0" />
-          </ForEachFileEnumeratorProperties>
-        </DTS:ObjectData>
-      </DTS:ForEachEnumerator>
-      <DTS:Variables />
-      <DTS:Executables />
-      <DTS:ForEachVariableMappings>
-        <DTS:ForEachVariableMapping
-          DTS:CreationName=""
-          DTS:DTSID="{AA1673FC-7C6F-4FC0-83BC-58E8EBD08E84}"
-          DTS:ObjectName="{AA1673FC-7C6F-4FC0-83BC-58E8EBD08E84}"
-          DTS:ValueIndex="0"
-          DTS:VariableName="User::aFile" />
-      </DTS:ForEachVariableMappings>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Init conv ppto"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Carga los tipos de cambio usados en cada ppto"
-      DTS:Disabled="True"
       DTS:DTSID="{EA45D44E-AAA5-4C4F-B4B5-5543C59356C8}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Init conv ppto"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10334,7 +10362,7 @@ order by
       DTS:LocaleID="-1"
       DTS:ObjectName="Init fechas"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10343,34 +10371,15 @@ order by
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Init Gasto Real Triangulado"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{2EE5F936-6E2F-4420-AE46-2566521B0A9A}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Init Gasto Real Triangulado"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{2597876E-BC88-4E88-9334-19DFBCDD452D}"
-          SQLTask:SqlStatementSource="exec sp_init_gasto_real_triangulado" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Init Partidas Ppto"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Carga jerarquia de partidas de ppto"
-      DTS:Disabled="True"
       DTS:DTSID="{D6A0BCFB-1CA3-45C5-8ECC-4FBCFE2256B9}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Init Partidas Ppto"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10397,7 +10406,7 @@ order by
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Parametros"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10415,8 +10424,6 @@ order by
           DTS:ObjectName="Carga Parametros"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
-          <DTS:PropertyExpression
-            DTS:Name="[Lee Parametros].[SiteUrl]">@[User::SiteURL]</DTS:PropertyExpression>
           <DTS:ObjectData>
             <pipeline
               BLOBTempStoragePath=""
@@ -10581,13 +10588,13 @@ order by
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="Valor"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Valor]" />
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Valor]" />
                         <inputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Id.Inputs[Derived Column Input].Columns[Codigo (Title)]"
+                          refId="Package\Init Parámetros\Carga Parametros\Id.Inputs[Derived Column Input].Columns[Codigo]"
                           cachedDataType="wstr"
                           cachedLength="255"
-                          cachedName="Codigo (Title)"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (Title)]" />
+                          cachedName="Codigo"
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Codigo]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -10614,13 +10621,13 @@ order by
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">"RAIZ.param." + #{Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (Title)]}</property>
+                              name="Expression">"RAIZ.param." + #{Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Codigo]}</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">"RAIZ.param." + [Codigo (Title)]</property>
+                              name="FriendlyExpression">"RAIZ.param." + Codigo</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -10637,7 +10644,7 @@ order by
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">"&lt;node&gt;" + #{Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Valor]} + "&lt;/node&gt;"</property>
+                              name="Expression">"&lt;node&gt;" + #{Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Valor]} + "&lt;/node&gt;"</property>
                             <property
                               containsID="true"
                               dataType="System.String"
@@ -10675,581 +10682,116 @@ order by
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Init Parámetros\Carga Parametros\Lee Parametros"
+                  refId="Package\Init Parámetros\Carga Parametros\Origen OData"
                   componentClassID="Microsoft.ManagedComponentHost"
-                  description="Extract data from SharePoint lists"
-                  name="Lee Parametros">
+                  contactInfo="Componente de origen OData;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+                  description="Leer datos de los servicios OData"
+                  name="Origen OData"
+                  usesDispositions="true">
                   <properties>
                     <property
                       dataType="System.String"
-                      name="UserComponentTypeName">Microsoft.Samples.SqlServer.SSIS.SharePointListAdapters.SharePointListSource, SharePointListAdapters, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4b3011e1ece9d47</property>
-                    <property
-                      dataType="System.String"
-                      description="Path to SharePoint site / subsite that contains the list."
+                      description="Nombre de la colección que se recuperará del servicio."
                       expressionType="Notify"
-                      name="SiteUrl">http://sppmo.cmpc.cl/ppto2020/control_dev/</property>
-                    <property
-                      dataType="System.String"
-                      description="Name of the SharePoint list to load data from."
-                      expressionType="Notify"
-                      name="SiteListName">Parametros</property>
-                    <property
-                      dataType="System.String"
-                      description="Name of the view within SharePoint list to load data from."
-                      expressionType="Notify"
-                      name="SiteListViewName">Export</property>
-                    <property
-                      dataType="System.String"
-                      description="Culture to use when communicating with remote SharePoint Server (en-US)."
-                      expressionType="Notify"
-                      name="SharePointCulture">en-US</property>
-                    <property
-                      dataType="System.String"
-                      description="CAML Query to use to more specifically pull back the rows you are interested in from SharePoint (Look up syntax of using this XML Element: &lt;Query /&gt;)"
-                      expressionType="Notify"
-                      name="CamlQuery">&lt;Query /&gt;</property>
-                    <property
-                      dataType="System.Int16"
-                      description="# of elements to pull from the Webservice at a time."
-                      name="BatchSize"
-                      typeConverter="System.Int16, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1000</property>
+                      name="CollectionName">Parametros</property>
                     <property
                       dataType="System.Int32"
-                      description="When loading items, should subfolders within the list also be loaded. Set to 'true' to load child folders."
-                      name="IsRecursive"
-                      typeConverter="Microsoft.Samples.SqlServer.SSIS.SharePointListAdapters.Enums.TrueFalseValue, SharePointListAdapters, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4b3011e1ece9d47">0</property>
+                      description="La longitud máxima predeterminada de una cadena que no tiene maxlength especificada en el esquema."
+                      name="DefaultStringLength">4000</property>
                     <property
-                      dataType="System.Int32"
-                      description="Whether to return folders with the list content"
-                      name="IncludeFolders"
-                      typeConverter="Microsoft.Samples.SqlServer.SSIS.SharePointListAdapters.Enums.TrueFalseValue, SharePointListAdapters, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4b3011e1ece9d47">0</property>
+                      dataType="System.String"
+                      description="Consulta en la dirección URL. "
+                      expressionType="Notify"
+                      name="Query">$select=Codigo,Valor</property>
                     <property
-                      dataType="System.Int32"
-                      description="Whether to return colunmns SharePoint considers hidden"
-                      name="IncludeHiddenColumns"
-                      typeConverter="Microsoft.Samples.SqlServer.SSIS.SharePointListAdapters.Enums.TrueFalseValue, SharePointListAdapters, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4b3011e1ece9d47">0</property>
+                      dataType="System.String"
+                      description="Ruta de acceso a recursos de la colección que se recuperará del servicio."
+                      expressionType="Notify"
+                      name="ResourcePath"></property>
                     <property
-                      dataType="System.Int32"
-                      description="Whether to decode lookups and make an ID/Value column for each (newline delimited)"
-                      name="DecodeLookupColumns"
-                      typeConverter="Microsoft.Samples.SqlServer.SSIS.SharePointListAdapters.Enums.TrueFalseValue, SharePointListAdapters, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4b3011e1ece9d47">0</property>
+                      dataType="System.Boolean"
+                      description="Cuando se establece en True, use la ruta de acceso a recursos como la colección solicitada; en caso contrario, use el nombre de la colección."
+                      expressionType="Notify"
+                      name="UseResourcePath">false</property>
                     <property
-                      dataType="System.Int32"
-                      description="Whether to use a connection manager for this component"
-                      name="UseConnectionManager"
-                      typeConverter="Microsoft.Samples.SqlServer.SSIS.SharePointListAdapters.Enums.TrueFalseValue, SharePointListAdapters, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f4b3011e1ece9d47">1</property>
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.OData</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Connections[Sharepoint Credential Connection]"
-                      connectionManagerID="{6DF2248B-614F-4447-9191-6861B72DAE32}:invalid"
-                      connectionManagerRefId="{6DF2248B-614F-4447-9191-6861B72DAE32}:invalid"
-                      name="Sharepoint Credential Connection" />
+                      refId="Package\Init Parámetros\Carga Parametros\Origen OData.Connections[Conexión]"
+                      connectionManagerID="Package.ConnectionManagers[OData_Shp]"
+                      connectionManagerRefId="Package.ConnectionManagers[OData_Shp]"
+                      description="Conexión al servicio OData"
+                      name="Conexión" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output]"
-                      description="Parametros"
-                      name="Public List Output">
+                      refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output]"
+                      name="Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[ID]"
-                          dataType="i4"
-                          description="ID"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[ID]"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[ID]"
-                          name="ID">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">ID</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (LinkTitle)]"
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Codigo]"
                           dataType="wstr"
-                          description="Codigo"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Codigo (LinkTitle)]"
-                          length="4000"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (LinkTitle)]"
-                          name="Codigo (LinkTitle)">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">LinkTitle</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Descripción]"
-                          dataType="nText"
-                          description="Descripción"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Descripción]"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Descripción]"
-                          name="Descripción">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Descripci_x00f3_n</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Tipo de Dato]"
-                          dataType="wstr"
-                          description="Tipo de Dato"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Tipo de Dato]"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].ExternalColumns[Codigo]"
                           length="255"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Tipo de Dato]"
-                          name="Tipo de Dato">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Tipo_x0020_de_x0020_Dato</property>
-                          </properties>
-                        </outputColumn>
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Codigo]"
+                          name="Codigo"
+                          truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Valor]"
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Valor]"
                           dataType="wstr"
-                          description="Valor"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Valor]"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].ExternalColumns[Valor]"
                           length="255"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Valor]"
-                          name="Valor">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Valor</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (Title)]"
-                          dataType="wstr"
-                          description="Codigo"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Codigo (Title)]"
-                          length="255"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (Title)]"
-                          name="Codigo (Title)">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Title</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (LinkTitleNoMenu)]"
-                          dataType="wstr"
-                          description="Codigo"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Codigo (LinkTitleNoMenu)]"
-                          length="4000"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Codigo (LinkTitleNoMenu)]"
-                          name="Codigo (LinkTitleNoMenu)">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">LinkTitleNoMenu</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Tipo de contenido]"
-                          dataType="wstr"
-                          description="Tipo de contenido"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Tipo de contenido]"
-                          length="4000"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Tipo de contenido]"
-                          name="Tipo de contenido">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">ContentType</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Modificado]"
-                          dataType="dbTimeStamp"
-                          description="Modificado"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Modificado]"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Modificado]"
-                          name="Modificado">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Modified</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Creado]"
-                          dataType="dbTimeStamp"
-                          description="Creado"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Creado]"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Creado]"
-                          name="Creado">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Created</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Creado por]"
-                          dataType="wstr"
-                          description="Creado por"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Creado por]"
-                          length="100"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Creado por]"
-                          name="Creado por">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Author</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Modificado por]"
-                          dataType="wstr"
-                          description="Modificado por"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Modificado por]"
-                          length="100"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Modificado por]"
-                          name="Modificado por">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Editor</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Versión]"
-                          dataType="wstr"
-                          description="Versión"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Versión]"
-                          length="255"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Versión]"
-                          name="Versión">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">_UIVersionString</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Datos adjuntos]"
-                          dataType="bool"
-                          description="Datos adjuntos"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Datos adjuntos]"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Datos adjuntos]"
-                          name="Datos adjuntos">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Attachments</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Editar]"
-                          dataType="wstr"
-                          description="Editar"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Editar]"
-                          length="4000"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Editar]"
-                          name="Editar">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Edit</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Tipo]"
-                          dataType="wstr"
-                          description="Tipo"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Tipo]"
-                          length="4000"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Tipo]"
-                          name="Tipo">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">DocIcon</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Número secundario de elemento]"
-                          dataType="wstr"
-                          description="Número secundario de elemento"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Número secundario de elemento]"
-                          length="255"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Número secundario de elemento]"
-                          name="Número secundario de elemento">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">ItemChildCount</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Recuento secundario de carpetas]"
-                          dataType="wstr"
-                          description="Recuento secundario de carpetas"
-                          externalMetadataColumnId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Recuento secundario de carpetas]"
-                          length="255"
-                          lineageId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].Columns[Recuento secundario de carpetas]"
-                          name="Recuento secundario de carpetas">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">FolderChildCount</property>
-                          </properties>
-                        </outputColumn>
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].Columns[Valor]"
+                          name="Valor"
+                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[ID]"
-                          dataType="i4"
-                          description="ID"
-                          name="ID">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">ID</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Codigo (LinkTitle)]"
-                          dataType="wstr"
-                          description="Codigo"
-                          length="4000"
-                          name="Codigo (LinkTitle)">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">LinkTitle</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Descripción]"
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].ExternalColumns[Codigo]"
                           dataType="nText"
-                          description="Descripción"
-                          name="Descripción">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Descripci_x00f3_n</property>
-                          </properties>
-                        </externalMetadataColumn>
+                          name="Codigo" />
                         <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Tipo de Dato]"
-                          dataType="wstr"
-                          description="Tipo de Dato"
-                          length="255"
-                          name="Tipo de Dato">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Tipo_x0020_de_x0020_Dato</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Valor]"
-                          dataType="wstr"
-                          description="Valor"
-                          length="255"
-                          name="Valor">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Valor</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Codigo (Title)]"
-                          dataType="wstr"
-                          description="Codigo"
-                          length="255"
-                          name="Codigo (Title)">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Title</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Codigo (LinkTitleNoMenu)]"
-                          dataType="wstr"
-                          description="Codigo"
-                          length="4000"
-                          name="Codigo (LinkTitleNoMenu)">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">LinkTitleNoMenu</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Tipo de contenido]"
-                          dataType="wstr"
-                          description="Tipo de contenido"
-                          length="4000"
-                          name="Tipo de contenido">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">ContentType</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Modificado]"
-                          dataType="dbTimeStamp"
-                          description="Modificado"
-                          name="Modificado">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Modified</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Creado]"
-                          dataType="dbTimeStamp"
-                          description="Creado"
-                          name="Creado">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Created</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Creado por]"
-                          dataType="wstr"
-                          description="Creado por"
-                          length="100"
-                          name="Creado por">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Author</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Modificado por]"
-                          dataType="wstr"
-                          description="Modificado por"
-                          length="100"
-                          name="Modificado por">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Editor</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Versión]"
-                          dataType="wstr"
-                          description="Versión"
-                          length="255"
-                          name="Versión">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">_UIVersionString</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Datos adjuntos]"
-                          dataType="bool"
-                          description="Datos adjuntos"
-                          name="Datos adjuntos">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Attachments</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Editar]"
-                          dataType="wstr"
-                          description="Editar"
-                          length="4000"
-                          name="Editar">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">Edit</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Tipo]"
-                          dataType="wstr"
-                          description="Tipo"
-                          length="4000"
-                          name="Tipo">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">DocIcon</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Número secundario de elemento]"
-                          dataType="wstr"
-                          description="Número secundario de elemento"
-                          length="255"
-                          name="Número secundario de elemento">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">ItemChildCount</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output].ExternalColumns[Recuento secundario de carpetas]"
-                          dataType="wstr"
-                          description="Recuento secundario de carpetas"
-                          length="255"
-                          name="Recuento secundario de carpetas">
-                          <properties>
-                            <property
-                              dataType="System.String"
-                              description="SharePoint ID"
-                              name="Id">FolderChildCount</property>
-                          </properties>
-                        </externalMetadataColumn>
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output].ExternalColumns[Valor]"
+                          dataType="nText"
+                          name="Valor" />
                       </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output]"
+                      isErrorOut="true"
+                      name="Error output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                        <outputColumn
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[Codigo]"
+                          dataType="nText"
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[Codigo]"
+                          name="Codigo" />
+                        <outputColumn
+                          refId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[Valor]"
+                          dataType="nText"
+                          lineageId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Error output].Columns[Valor]"
+                          name="Valor" />
+                      </outputColumns>
+                      <externalMetadataColumns />
                     </output>
                   </outputs>
                 </component>
@@ -11261,10 +10803,10 @@ order by
                   name="Derived Column Output"
                   startId="Package\Init Parámetros\Carga Parametros\Id.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Init Parámetros\Carga Parametros.Paths[Public List Output]"
+                  refId="Package\Init Parámetros\Carga Parametros.Paths[Output]"
                   endId="Package\Init Parámetros\Carga Parametros\Id.Inputs[Derived Column Input]"
-                  name="Public List Output"
-                  startId="Package\Init Parámetros\Carga Parametros\Lee Parametros.Outputs[Public List Output]" />
+                  name="Output"
+                  startId="Package\Init Parámetros\Carga Parametros\Origen OData.Outputs[Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -11285,13 +10827,12 @@ order by
       DTS:refId="Package\Init Ppto Gasto"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{048B02F7-3D03-40BC-9A44-48B322E1EC81}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Init Ppto Gasto"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11308,7 +10849,7 @@ order by
       DTS:LocaleID="-1"
       DTS:ObjectName="Init Proyectos Ppto"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="8">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11337,7 +10878,6 @@ order by
       DTS:refId="Package\Normas"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{DC50AFA9-3C59-402C-9F62-A7B8B8997040}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -11353,7 +10893,7 @@ order by
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Normas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13408,7 +12948,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:refId="Package\Periodos Facturación"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{01B39BA3-E331-4A48-B6A7-CF6717D3672A}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -13518,7 +13057,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                     <input
                       refId="Package\Periodos Facturación\Carga Periodos\Graba Periodos.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
@@ -13716,57 +13255,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                     </output>
                   </outputs>
                 </component>
-                <component
-                  refId="Package\Periodos Facturación\Carga Periodos\Recordset Destination"
-                  componentClassID="Microsoft.RecordsetDestination"
-                  contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-                  description="Creates and populates an in-memory ADO recordset."
-                  name="Recordset Destination">
-                  <properties>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the recordset."
-                      name="VariableName">User::temp</property>
-                  </properties>
-                  <inputs>
-                    <input
-                      refId="Package\Periodos Facturación\Carga Periodos\Recordset Destination.Inputs[Recordset Destination Input]"
-                      hasSideEffects="true"
-                      name="Recordset Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Periodos Facturación\Carga Periodos\Recordset Destination.Inputs[Recordset Destination Input].Columns[id]"
-                          cachedDataType="wstr"
-                          cachedLength="263"
-                          cachedName="id"
-                          lineageId="Package\Periodos Facturación\Carga Periodos\Lee Periodos.Outputs[OLE DB Source Output].Columns[id]" />
-                        <inputColumn
-                          refId="Package\Periodos Facturación\Carga Periodos\Recordset Destination.Inputs[Recordset Destination Input].Columns[xml_data]"
-                          cachedDataType="nText"
-                          cachedName="xml_data"
-                          lineageId="Package\Periodos Facturación\Carga Periodos\Lee Periodos.Outputs[OLE DB Source Output].Columns[xml_data]" />
-                        <inputColumn
-                          refId="Package\Periodos Facturación\Carga Periodos\Recordset Destination.Inputs[Recordset Destination Input].Columns[ErrorCode]"
-                          cachedDataType="i4"
-                          cachedName="ErrorCode"
-                          lineageId="Package\Periodos Facturación\Carga Periodos\Graba Periodos.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
-                        <inputColumn
-                          refId="Package\Periodos Facturación\Carga Periodos\Recordset Destination.Inputs[Recordset Destination Input].Columns[ErrorColumn]"
-                          cachedDataType="i4"
-                          cachedName="ErrorColumn"
-                          lineageId="Package\Periodos Facturación\Carga Periodos\Graba Periodos.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                  </inputs>
-                </component>
               </components>
               <paths>
-                <path
-                  refId="Package\Periodos Facturación\Carga Periodos.Paths[OLE DB Destination Error Output]"
-                  endId="Package\Periodos Facturación\Carga Periodos\Recordset Destination.Inputs[Recordset Destination Input]"
-                  name="OLE DB Destination Error Output"
-                  startId="Package\Periodos Facturación\Carga Periodos\Graba Periodos.Outputs[OLE DB Destination Error Output]" />
                 <path
                   refId="Package\Periodos Facturación\Carga Periodos.Paths[OLE DB Source Output]"
                   endId="Package\Periodos Facturación\Carga Periodos\Graba Periodos.Inputs[OLE DB Destination Input]"
@@ -13785,7 +13275,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           DTS:LocaleID="-1"
           DTS:ObjectName="Init dim_periodos_fact"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13802,7 +13292,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Periodos"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13826,12 +13316,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:refId="Package\URL a DAV"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Tarea Script"
-      DTS:Disabled="True"
       DTS:DTSID="{AB3E3F09-C828-4BFD-8B52-0DEBCD41D6F6}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="URL a DAV"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -14632,7 +14121,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43.283018867924525"
           IsExpanded="True"
-          PanelSize="179,66"
+          PanelSize="179,67"
           Size="179,110"
           Id="Package\Carga Real\Foreach Archivos Directos"
           TopLeft="7.54716981132083,83.7169811320755" />
@@ -14668,7 +14157,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="194,201"
           Size="194,244"
           Id="Package\Carga Real"
-          TopLeft="562.166666666667,421.222222222222" />
+          TopLeft="841.75,376.138888888889" />
         <NodeLayout
           Size="135,44"
           Id="Package\Carga Triangulado\Borra Filiales"
@@ -14680,7 +14169,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43.283018867924525"
           IsExpanded="True"
-          PanelSize="163,62"
+          PanelSize="163,63"
           Size="163,106"
           Id="Package\Carga Triangulado\Foreach Archivo Filial"
           TopLeft="7.54716981132083,75.7169811320755" />
@@ -14713,29 +14202,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43.283018867924525"
           IsExpanded="True"
-          PanelSize="178,205"
+          PanelSize="178,206"
           Size="178,249"
           Id="Package\Carga Triangulado"
-          TopLeft="146.5,386.5" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="205,55"
-          Size="205,98"
-          Id="Package\Directo por cada Archivo"
-          TopLeft="1209.44444444444,492.166666666666" />
+          TopLeft="1246.91666666667,352.75" />
         <NodeLayout
           Size="135,44"
           Id="Package\Init conv ppto"
-          TopLeft="1275.85714285714,261.857142857143" />
+          TopLeft="364.60714285714,531.857142857143" />
         <NodeLayout
           Size="136,44"
           Id="Package\Init fechas"
-          TopLeft="958.5,24.9999999999998" />
-        <NodeLayout
-          Size="130,144"
-          Id="Package\Init Gasto Real Triangulado"
-          TopLeft="1445.44444444444,390.277777777777" />
+          TopLeft="439.75,372.5" />
         <NodeLayout
           Size="136,44"
           Id="Package\Init Parámetros\Borra Parametros"
@@ -14772,23 +14250,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="183,131"
           Size="183,175"
           Id="Package\Init Parámetros"
-          TopLeft="1009.5,140.5" />
+          TopLeft="622.5,402.25" />
         <NodeLayout
           Size="135,44"
           Id="Package\Init Partidas Ppto"
-          TopLeft="1463.28571428571,153.928571428571" />
+          TopLeft="270.369047619043,444.761904761904" />
         <NodeLayout
           Size="136,44"
           Id="Package\Init Ppto Gasto"
-          TopLeft="1264.21428571429,147.571428571428" />
+          TopLeft="445.46428571429,446.321428571428" />
         <NodeLayout
           Size="136,55"
           Id="Package\Init Proyectos Ppto"
-          TopLeft="437.388888888889,14.8888888888889" />
+          TopLeft="417.388888888889,271.138888888889" />
         <NodeLayout
           Size="136,44"
           Id="Package\Init RAIZ"
-          TopLeft="711.5,25.4999999999998" />
+          TopLeft="711.5,284.25" />
         <NodeLayout
           Size="135,44"
           Id="Package\Normas\Init Normas"
@@ -14825,7 +14303,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="152,137"
           Size="152,180"
           Id="Package\Normas"
-          TopLeft="194.388888888889,136.888888888889" />
+          TopLeft="941.472222222222,106.888888888889" />
         <NodeLayout
           Size="136,44"
           Id="Package\Periodos Facturación\Carga Periodos"
@@ -14866,37 +14344,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="338,153"
           Size="338,197"
           Id="Package\Periodos Facturación"
-          TopLeft="610.5,129.5" />
+          TopLeft="370.5,32.5" />
         <NodeLayout
           Size="135,44"
           Id="Package\URL a DAV"
-          TopLeft="389.444444444445,482.666666666667" />
+          TopLeft="1070.27777777778,478.833333333333" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="811.5,69.4999999999998">
+          TopLeft="779.5,328.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="289.5,71.0000000000001"
+              EndConnector="-65.5,74.0000000000002"
               Start="0,0"
-              End="289.5,63.5000000000001">
+              End="-65.5,66.5000000000002">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5769230769231" />
+                    End="0,33.0000000000001" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.5769230769231"
-                    Point2="0,24.5769230769231"
-                    Point3="4,24.5769230769231" />
+                    Point1="0,33.0000000000001"
+                    Point2="0,37.0000000000001"
+                    Point3="-4,37.0000000000001" />
                   <mssgle:LineSegment
-                    End="285.5,24.5769230769231" />
+                    End="-61.5,37.0000000000001" />
                   <mssgle:CubicBezierSegment
-                    Point1="285.5,24.5769230769231"
-                    Point2="289.5,24.5769230769231"
-                    Point3="289.5,28.5769230769231" />
+                    Point1="-61.5,37.0000000000001"
+                    Point2="-65.5,37.0000000000001"
+                    Point3="-65.5,41.0000000000001" />
                   <mssgle:LineSegment
-                    End="289.5,63.5000000000001" />
+                    End="-65.5,66.5000000000002" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14907,18 +14385,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="779.5,69.4999999999998">
+          TopLeft="779.5,284.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-240,-54.7499999999998"
               Start="0,0"
-              End="0,52.5">
+              End="-240,-47.2499999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,-23.3749999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.3749999999999"
+                    Point2="0,-27.3749999999999"
+                    Point3="-4,-27.3749999999999" />
+                  <mssgle:LineSegment
+                    End="-236,-27.3749999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-236,-27.3749999999999"
+                    Point2="-240,-27.3749999999999"
+                    Point3="-240,-31.3749999999999" />
+                  <mssgle:LineSegment
+                    End="-240,-47.2499999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14929,18 +14419,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="389.444444444445,507.833333333333">
+          TopLeft="1205.27777777778,500.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.9444444444443,0"
+              EndConnector="41.6388888888882,-23.5833333333335"
               Start="0,0"
-              End="-57.4444444444443,0">
+              End="34.1388888888882,-23.5833333333335">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-57.4444444444443,0" />
+                    End="16.8194444444441,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.8194444444441,0"
+                    Point2="20.8194444444441,0"
+                    Point3="20.8194444444441,-4" />
+                  <mssgle:LineSegment
+                    End="20.8194444444441,-19.5833333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.8194444444441,-19.5833333333335"
+                    Point2="20.8194444444441,-23.5833333333335"
+                    Point3="24.8194444444441,-23.5833333333335" />
+                  <mssgle:LineSegment
+                    End="34.1388888888882,-23.5833333333335" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14951,30 +14453,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="1192.5,255.833333333333">
+          TopLeft="622.5,517.583333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83.3571428571427,28.0238095238096"
+              EndConnector="-122.89285714286,36.2738095238097"
               Start="0,0"
-              End="75.8571428571427,28.0238095238096">
+              End="-115.39285714286,36.2738095238097">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="29.7959877042549,0" />
+                    End="-45.8251900986907,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="29.7959877042549,0"
-                    Point2="33.7959877042549,0"
-                    Point3="33.7959877042549,4" />
+                    Point1="-45.8251900986907,0"
+                    Point2="-49.8251900986907,0"
+                    Point3="-49.8251900986907,4" />
                   <mssgle:LineSegment
-                    End="33.7959877042549,24.0238095238096" />
+                    End="-49.8251900986907,32.2738095238097" />
                   <mssgle:CubicBezierSegment
-                    Point1="33.7959877042549,24.0238095238096"
-                    Point2="33.7959877042549,28.0238095238096"
-                    Point3="37.7959877042549,28.0238095238096" />
+                    Point1="-49.8251900986907,32.2738095238097"
+                    Point2="-49.8251900986907,36.2738095238097"
+                    Point3="-53.8251900986907,36.2738095238097" />
                   <mssgle:LineSegment
-                    End="75.8571428571427,28.0238095238096" />
+                    End="-115.39285714286,36.2738095238097" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14985,18 +14487,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="847.5,47.2499999999998">
+          TopLeft="758.166666666667,328.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="111,0"
+              EndConnector="-250.416666666667,44.25"
               Start="0,0"
-              End="103.5,0">
+              End="-250.416666666667,36.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="103.5,0" />
+                    End="0,14.0087209302325" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.0087209302325"
+                    Point2="0,18.0087209302325"
+                    Point3="-4,18.0087209302325" />
+                  <mssgle:LineSegment
+                    End="-246.416666666667,18.0087209302325" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-246.416666666667,18.0087209302325"
+                    Point2="-250.416666666667,18.0087209302325"
+                    Point3="-250.416666666667,22.0087209302325" />
+                  <mssgle:LineSegment
+                    End="-250.416666666667,36.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15007,30 +14521,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="1192.5,200.166666666666">
+          TopLeft="622.5,489.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="71.7142857142858,-30.5952380952381"
+              EndConnector="-41.0357142857099,-21.428571428572"
               Start="0,0"
-              End="64.2142857142858,-30.5952380952381">
+              End="-33.5357142857099,-21.428571428572">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="25.0755541174567,0" />
+                    End="-16.517857142855,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="25.0755541174567,0"
-                    Point2="29.0755541174567,0"
-                    Point3="29.0755541174567,-4" />
+                    Point1="-16.517857142855,0"
+                    Point2="-20.517857142855,0"
+                    Point3="-20.517857142855,-4" />
                   <mssgle:LineSegment
-                    End="29.0755541174567,-26.5952380952381" />
+                    End="-20.517857142855,-17.428571428572" />
                   <mssgle:CubicBezierSegment
-                    Point1="29.0755541174567,-26.5952380952381"
-                    Point2="29.0755541174567,-30.5952380952381"
-                    Point3="33.0755541174567,-30.5952380952381" />
+                    Point1="-20.517857142855,-17.428571428572"
+                    Point2="-20.517857142855,-21.428571428572"
+                    Point3="-24.517857142855,-21.428571428572" />
                   <mssgle:LineSegment
-                    End="64.2142857142858,-30.5952380952381" />
+                    End="-33.5357142857099,-21.428571428572" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15041,18 +14555,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="1400.21428571429,172.75">
+          TopLeft="445.46428571429,467.541666666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="63.0714285714287,0"
+              EndConnector="-40.0952380952469,0"
               Start="0,0"
-              End="55.5714285714287,0">
+              End="-32.5952380952469,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="55.5714285714287,0" />
+                    End="-32.5952380952469,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15063,18 +14577,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="711.5,44.9444444444443">
+          TopLeft="711.5,302.444444444444">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-138.111111111111,0"
+              EndConnector="-158.111111111111,0"
               Start="0,0"
-              End="-130.611111111111,0">
+              End="-150.611111111111,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-130.611111111111,0" />
+                    End="-150.611111111111,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15085,30 +14599,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="524.444444444445,504.666666666667">
+          TopLeft="1070.27777777778,499.486111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="37.7222222222224,38.5555555555554"
+              EndConnector="-34.5277777777781,0"
               Start="0,0"
-              End="30.2222222222224,38.5555555555554">
+              End="-27.0277777777781,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="14.8611111111112,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.8611111111112,0"
-                    Point2="18.8611111111112,0"
-                    Point3="18.8611111111112,4" />
-                  <mssgle:LineSegment
-                    End="18.8611111111112,34.5555555555554" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.8611111111112,34.5555555555554"
-                    Point2="18.8611111111112,38.5555555555554"
-                    Point3="22.8611111111112,38.5555555555554" />
-                  <mssgle:LineSegment
-                    End="30.2222222222224,38.5555555555554" />
+                    End="-27.0277777777781,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15119,30 +14621,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="747.5,69.4999999999998">
+          TopLeft="847.5,306.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-477.111111111111,67.3888888888892"
+              EndConnector="93.9722222222224,-109.361111111111"
               Start="0,0"
-              End="-477.111111111111,59.8888888888892">
+              End="86.4722222222224,-109.361111111111">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.3269230769232" />
+                    End="42.9861111111112,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.3269230769232"
-                    Point2="0,23.3269230769232"
-                    Point3="-4,23.3269230769232" />
+                    Point1="42.9861111111112,0"
+                    Point2="46.9861111111112,0"
+                    Point3="46.9861111111112,-4" />
                   <mssgle:LineSegment
-                    End="-473.111111111111,23.3269230769232" />
+                    End="46.9861111111112,-105.361111111111" />
                   <mssgle:CubicBezierSegment
-                    Point1="-473.111111111111,23.3269230769232"
-                    Point2="-477.111111111111,23.3269230769232"
-                    Point3="-477.111111111111,27.3269230769232" />
+                    Point1="46.9861111111112,-105.361111111111"
+                    Point2="46.9861111111112,-109.361111111111"
+                    Point3="50.9861111111112,-109.361111111111" />
                   <mssgle:LineSegment
-                    End="-477.111111111111,59.8888888888892" />
+                    End="86.4722222222224,-109.361111111111" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15153,30 +14655,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="294.388888888889,316.888888888889">
+          TopLeft="993.472222222222,286.888888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="364.777777777778,104.333333333333"
+              EndConnector="-54.7222222222222,89.2499999999995"
               Start="0,0"
-              End="364.777777777778,96.8333333333331">
+              End="-54.7222222222222,81.7499999999995">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.3854166666666" />
+                    End="0,32.2578124999998" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.3854166666666"
-                    Point2="0,42.3854166666666"
-                    Point3="4,42.3854166666666" />
+                    Point1="0,32.2578124999998"
+                    Point2="0,36.2578124999998"
+                    Point3="-4,36.2578124999998" />
                   <mssgle:LineSegment
-                    End="360.777777777778,42.3854166666666" />
+                    End="-50.7222222222222,36.2578124999998" />
                   <mssgle:CubicBezierSegment
-                    Point1="360.777777777778,42.3854166666666"
-                    Point2="364.777777777778,42.3854166666666"
-                    Point3="364.777777777778,46.3854166666666" />
+                    Point1="-50.7222222222222,36.2578124999998"
+                    Point2="-54.7222222222222,36.2578124999998"
+                    Point3="-54.7222222222222,40.2578124999998" />
                   <mssgle:LineSegment
-                    End="364.777777777778,96.8333333333331" />
+                    End="-54.7222222222222,81.7499999999995" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15187,30 +14689,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="246.388888888889,316.888888888889">
+          TopLeft="1041.47222222222,286.888888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-10.8888888888887,69.6111111111109"
+              EndConnector="294.444444444444,65.861111111111"
               Start="0,0"
-              End="-10.8888888888887,62.1111111111109">
+              End="294.444444444444,58.361111111111">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.2795138888888" />
+                    End="0,22.7560763888888" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.2795138888888"
-                    Point2="0,28.2795138888888"
-                    Point3="-4,28.2795138888888" />
+                    Point1="0,22.7560763888888"
+                    Point2="0,26.7560763888888"
+                    Point3="4,26.7560763888888" />
                   <mssgle:LineSegment
-                    End="-6.88888888888869,28.2795138888888" />
+                    End="290.444444444444,26.7560763888888" />
                   <mssgle:CubicBezierSegment
-                    Point1="-6.88888888888869,28.2795138888888"
-                    Point2="-10.8888888888887,28.2795138888888"
-                    Point3="-10.8888888888887,32.2795138888888" />
+                    Point1="290.444444444444,26.7560763888888"
+                    Point2="294.444444444444,26.7560763888888"
+                    Point3="294.444444444444,30.7560763888888" />
                   <mssgle:LineSegment
-                    End="-10.8888888888887,62.1111111111109" />
+                    End="294.444444444444,58.361111111111" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15232,59 +14734,59 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Sort Gasto"
           TopLeft="201.72641509434,250.141509433962" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Merge Join"
           TopLeft="201.72641509434,168.518867924528" />
         <NodeLayout
-          Size="135.773584905661,43.9622641509434"
+          Size="136,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Union All"
           TopLeft="414.216981132075,331.72641509434" />
         <NodeLayout
-          Size="135.773584905661,43.9622641509434"
+          Size="136,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Recordset Destination"
           TopLeft="552.367924528302,498.481132075472" />
         <NodeLayout
-          Size="135.773584905661,43.9622641509434"
+          Size="136,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\distribuye"
           TopLeft="414.216981132075,168.481132075472" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Tipo Gasto"
           TopLeft="201.72641509434,331.72641509434" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\ids y Nulos"
           TopLeft="5.5,331.72641509434" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Data Conversion"
           TopLeft="5.5,250.103773584906" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Normas"
           TopLeft="201.72641509434,5.5" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Lee Gasto Directo"
           TopLeft="9.5,8.97169811320757" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Derived Column"
           TopLeft="8.70754716981128,87.5754716981132" />
         <NodeLayout
-          Size="135.773584905661,43.9622641509434"
+          Size="136,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Graba Gasto Real"
           TopLeft="414.216981132075,419.72641509434" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Sort"
           TopLeft="201.72641509434,86.8962264150944" />
         <NodeLayout
-          Size="135.358490566038,43.9622641509434"
+          Size="135,44"
           Id="Package\Carga Real\Foreach Archivos Directos\Carga Gasto Directo\Anuladas"
           TopLeft="5.5,168.481132075472" />
         <EdgeLayout
@@ -15307,7 +14809,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-16.44576171875,10.2056769604953,32.8915234375,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15330,9 +14832,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15354,9 +14854,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15378,9 +14876,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15403,7 +14899,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-21.847578125,-20.702434035967,43.69515625,11.2822265625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15426,9 +14922,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15455,7 +14949,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-4.13343455188699,22.3962264150943,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15479,7 +14973,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="5.35345961084905,5,58.92515625,11.2822265625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15506,9 +15000,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15534,9 +15026,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15558,9 +15048,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15586,9 +15074,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15610,9 +15096,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15634,9 +15118,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15648,52 +15130,52 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Lee Normas"
-          TopLeft="542.745283018868,5.5" />
+          TopLeft="577.745283018868,5.5" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Lee Archivo Filial"
-          TopLeft="180.292452830189,10.9716981132075" />
+          TopLeft="215.292452830189,10.9716981132075" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Graba Real Filial"
-          TopLeft="357.877358490566,391.839622641509" />
+          TopLeft="392.877358490566,391.839622641509" />
         <NodeLayout
-          Size="135.245283018868,43.8867924528302"
+          Size="135,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Limpia id"
-          TopLeft="5.5,165.462264150943" />
+          TopLeft="40.5,165.462264150943" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\¿Proyectos?"
-          TopLeft="173.009433962264,244.141509433962" />
+          TopLeft="208.009433962264,244.141509433962" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\id y nulos"
-          TopLeft="173.009433962264,164.594339622642" />
+          TopLeft="208.009433962264,164.594339622642" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\ids proyectos"
-          TopLeft="542.745283018868,244.141509433962" />
+          TopLeft="577.745283018868,244.141509433962" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Sort Gasto Real PEP"
-          TopLeft="357.877358490566,164.594339622642" />
+          TopLeft="392.877358490566,164.594339622642" />
         <NodeLayout
-          Size="135.245283018868,43.8867924528302"
+          Size="135,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Union All"
-          TopLeft="358.141509433962,327.952830188679" />
+          TopLeft="393.141509433962,327.952830188679" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Merge Join"
-          TopLeft="542.745283018868,164.594339622642" />
+          TopLeft="577.745283018868,164.594339622642" />
         <NodeLayout
-          Size="135.358490566038,43.9245283018868"
+          Size="135,44"
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Data Conversion"
-          TopLeft="173.235849056604,85.0471698113208" />
+          TopLeft="208.235849056604,85.0471698113208" />
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Ceco]"
-          TopLeft="240.896226415094,288.066037735849">
+          TopLeft="275.896226415094,288.066037735849">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15715,13 +15197,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="70.702052992335,24.9245283018868,22.7091015625,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Union All Output 1]"
-          TopLeft="425.764150943396,371.839622641509">
+          TopLeft="460.764150943396,371.839622641509">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15738,14 +15220,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Sort Output]"
-          TopLeft="493.650943396226,186.556603773585">
+          TopLeft="528.650943396226,186.556603773585">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15762,14 +15242,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Proyectos]"
-          TopLeft="261.650943396226,244.141509433962">
+          TopLeft="296.650943396226,244.141509433962">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15791,13 +15269,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="60.209025648585,-12.811320754717,43.69515625,11.2822265625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[OLE DB Source Output]"
-          TopLeft="610.632075471698,49.4245283018868">
+          TopLeft="645.632075471698,49.4245283018868">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15814,14 +15292,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Merge Join Output]"
-          TopLeft="610.632075471698,208.518867924528">
+          TopLeft="645.632075471698,208.518867924528">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15838,14 +15314,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Flat File Source Output]"
-          TopLeft="248.179245283019,54.8962264150943">
+          TopLeft="283.179245283019,54.8962264150943">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15866,14 +15340,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Derived Column Output2]"
-          TopLeft="73.1226415094339,209.349056603774">
+          TopLeft="108.122641509434,209.349056603774">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15894,14 +15366,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Derived Column Output1]"
-          TopLeft="173.009433962264,186.556603773585">
+          TopLeft="208.009433962264,186.556603773585">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15922,14 +15392,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Derived Column Output]"
-          TopLeft="610.632075471698,288.066037735849">
+          TopLeft="645.632075471698,288.066037735849">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15950,14 +15418,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Data Conversion Output]"
-          TopLeft="240.896226415094,128.971698113208">
+          TopLeft="275.896226415094,128.971698113208">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15974,8 +15440,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,43"
+          Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado\Destino de conjunto de registros"
+          TopLeft="59,35" />
+        <EdgeLayout
+          Id="Package\Carga Triangulado\Foreach Archivo Filial\Carga Gasto Triangulado.Paths[Data Conversion Error Output]"
+          TopLeft="208.235849056604,107.047169811321">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.235849056604,-29.0471698113208"
+              Start="0,0"
+              End="-84.235849056604,-21.5471698113208">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-80.235849056604,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.235849056604,0"
+                    Point2="-84.235849056604,0"
+                    Point3="-84.235849056604,-4" />
+                  <mssgle:LineSegment
+                    End="-84.235849056604,-21.5471698113208" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-150.322235775354,1,132.1727734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15986,46 +15484,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Init Parámetros\Carga Parametros">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Init Parámetros\Carga Parametros\Id"
-          TopLeft="5.5,95.3490566037736" />
+          TopLeft="453.5,112.349056603774" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Init Parámetros\Carga Parametros\Graba Parametros"
-          TopLeft="5.5,185.235849056604" />
-        <NodeLayout
-          Size="135.773584905661,43.9245283018868"
-          Id="Package\Init Parámetros\Carga Parametros\Lee Parametros"
-          TopLeft="5.5,5.5" />
-        <EdgeLayout
-          Id="Package\Init Parámetros\Carga Parametros.Paths[Public List Output]"
-          TopLeft="73.3867924528302,49.4245283018868">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.9245283018868"
-              Start="0,0"
-              End="0,38.4245283018868">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.4245283018868" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="453.5,202.235849056604" />
         <EdgeLayout
           Id="Package\Init Parámetros\Carga Parametros.Paths[Derived Column Output]"
-          TopLeft="73.3867924528302,139.27358490566">
+          TopLeft="521.38679245283,156.27358490566">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16042,45 +15512,94 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Init Parámetros\Carga Parametros\Origen OData"
+          TopLeft="471,27" />
+        <EdgeLayout
+          Id="Package\Init Parámetros\Carga Parametros.Paths[Output]"
+          TopLeft="542.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21,43.3490566037736"
+              Start="0,0"
+              End="-21,35.8490566037736">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.6745283018868" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.6745283018868"
+                    Point2="0,21.6745283018868"
+                    Point3="-4,21.6745283018868" />
+                  <mssgle:LineSegment
+                    End="-17,21.6745283018868" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17,21.6745283018868"
+                    Point2="-21,21.6745283018868"
+                    Point3="-21,25.6745283018868" />
+                  <mssgle:LineSegment
+                    End="-21,35.8490566037736" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Init Parámetros\Carga Parametros\Graba Parametros">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Normas\Lee Normas">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Normas\Lee Normas\Valida"
           TopLeft="350.971698113208,85.6132075471698" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Normas\Lee Normas\ids"
           TopLeft="5.5,85.6132075471698" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Normas\Lee Normas\Derived Column"
           TopLeft="178.216981132075,5.5" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Normas\Lee Normas\Archivo Normas"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Normas\Lee Normas\graba norma"
           TopLeft="5.5,186.443396226415" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Normas\Lee Normas\Aggregate"
           TopLeft="178.216981132075,85.6132075471698" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Normas\Lee Normas\Procesa Linea"
           TopLeft="350.971698113208,5.5" />
         <EdgeLayout
@@ -16103,7 +15622,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-31.2763277564858,5,33.0715234375,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16126,9 +15645,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16150,9 +15667,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16174,9 +15689,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16198,9 +15711,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16222,9 +15733,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16234,19 +15743,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Periodos Facturación\Carga Periodos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Periodos Facturación\Carga Periodos\Lee Periodos"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="135.773584905661,43.9245283018868"
+          Size="136,44"
           Id="Package\Periodos Facturación\Carga Periodos\Graba Periodos"
           TopLeft="5.5,103.349056603774" />
-        <NodeLayout
-          Size="135.773584905661,43.9245283018868"
-          Id="Package\Periodos Facturación\Carga Periodos\Recordset Destination"
-          TopLeft="245.801886792453,109.047169811321" />
         <EdgeLayout
           Id="Package\Periodos Facturación\Carga Periodos.Paths[OLE DB Source Output]"
           TopLeft="73.3867924528302,49.4245283018868">
@@ -16266,37 +15771,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Periodos Facturación\Carga Periodos.Paths[OLE DB Destination Error Output]"
-          TopLeft="141.27358490566,125.311320754717">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="104.528301886792,5.69811320754718"
-              Start="0,0"
-              End="97.0283018867925,5.69811320754718">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="52.2641509433963,0" />
-                  <mssgle:LineSegment
-                    End="52.2641509433963,5.69811320754718" />
-                  <mssgle:LineSegment
-                    End="97.0283018867925,5.69811320754718" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
