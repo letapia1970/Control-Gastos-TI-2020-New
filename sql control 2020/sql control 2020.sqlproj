@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>sql_control_2020</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{8d3c7dd7-ad86-4d91-83cb-aa54c9ea7c5e}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>sql_control_2020</RootNamespace>
+    <AssemblyName>sql_control_2020</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\fact_conversion_real.sql" />
+    <Build Include="dbo\Tables\fact_cobro_real.sql" />
+    <Build Include="dbo\Tables\fact_cobro_ppto.sql" />
+    <Build Include="dbo\Tables\dim_periodos_facturacion.sql" />
+    <Build Include="dbo\Tables\fact_gasto_real.sql" />
+    <Build Include="dbo\Tables\fact_gasto_ppto.sql" />
+    <Build Include="dbo\Tables\fact_gasto_forecast.sql" />
+    <Build Include="dbo\Tables\dim_jerarquias.sql" />
+    <Build Include="dbo\Views\view_org_sociedades.sql" />
+    <Build Include="dbo\Views\view_org_soc_cecos.sql" />
+    <Build Include="dbo\Views\view_org.sql" />
+    <Build Include="dbo\Views\view_org_paises.sql" />
+    <Build Include="dbo\Views\view_origen.sql" />
+    <Build Include="dbo\Views\view_directo.sql" />
+    <Build Include="dbo\Views\view_ctas_g01.sql" />
+    <Build Include="dbo\Views\view_normas.sql" />
+    <Build Include="dbo\Views\view_monedas.sql" />
+    <Build Include="dbo\Views\view_gasto_real_partidas.sql" />
+    <Build Include="dbo\Views\view_fechas.sql" />
+    <Build Include="dbo\Views\view_estrategias.sql" />
+    <Build Include="dbo\Views\view_conversion.sql" />
+    <Build Include="dbo\Views\view_d_cta.sql" />
+    <Build Include="dbo\Views\view_ctas_g02.sql" />
+    <Build Include="dbo\Views\view_periodos_facturacion.sql" />
+    <Build Include="dbo\Views\view_partidas.sql" />
+    <Build Include="dbo\Views\view_param.sql" />
+    <Build Include="dbo\Views\view_org_cobro.sql" />
+    <Build Include="dbo\Views\view_categorias.sql" />
+    <Build Include="dbo\Views\view_usr_control.sql" />
+    <Build Include="dbo\Views\view_tipos_de_cambio_real.sql" />
+    <Build Include="dbo\Views\view_proyectos.sql" />
+    <Build Include="dbo\Views\view_proveedores.sql" />
+    <Build Include="dbo\Views\view_prorrateo.sql" />
+    <Build Include="dbo\Views\view_normas_directo.sql" />
+    <Build Include="dbo\Views\view_cecos_control.sql" />
+    <Build Include="dbo\Views\view_ceco_control.sql" />
+    <Build Include="dbo\Views\view_cobro_real.sql" />
+    <Build Include="dbo\Views\view_cobro_ppto.sql" />
+    <Build Include="dbo\Views\view_gasto_ppto.sql" />
+    <Build Include="dbo\Views\view_gasto_real.sql" />
+    <Build Include="dbo\Views\view_org_negocio.sql" />
+    <Build Include="dbo\Views\view_gasto_ppto_softys.sql" />
+    <Build Include="dbo\Views\view_conv_ppto.sql" />
+    <Build Include="dbo\Views\view_versiones_ppto.sql" />
+    <Build Include="dbo\Views\view_conv_fcast.sql" />
+    <Build Include="dbo\Views\view_forecast.sql" />
+    <Build Include="dbo\Views\view_fcast_period.sql" />
+    <Build Include="Security\pmo_user_read.sql" />
+    <Build Include="Security\pmo_user_read_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\pep2proy.sql" />
+    <Build Include="dbo\Functions\get_parent_id.sql" />
+    <Build Include="dbo\Functions\conv_real.sql" />
+    <Build Include="dbo\Functions\get_element.sql" />
+    <Build Include="dbo\Functions\Split.sql" />
+    <Build Include="dbo\Stored Procedures\sp_init_gasto_real.sql" />
+    <Build Include="dbo\Stored Procedures\sp_add_node.sql" />
+    <Build Include="dbo\Stored Procedures\sp_reset_real_filial.sql" />
+    <Build Include="dbo\Stored Procedures\sp_reset_real_directo.sql" />
+    <Build Include="dbo\Stored Procedures\sp_update_UF_USD.sql" />
+    <Build Include="dbo\Stored Procedures\sp_update_proy_code.sql" />
+    <Build Include="dbo\Stored Procedures\sp_reset_pcodes.sql" />
+    <Build Include="dbo\Stored Procedures\sp_init_proyectos.sql" />
+    <Build Include="dbo\Stored Procedures\sp_init_partidas_ppto.sql" />
+    <Build Include="dbo\Stored Procedures\sp_init_hierarchy.sql" />
+    <Build Include="dbo\Stored Procedures\sp_init_gasto_ppto.sql" />
+    <Build Include="dbo\Stored Procedures\sp_date_create.sql" />
+    <Build Include="dbo\Stored Procedures\sp_crea_D_ctas.sql" />
+    <Build Include="dbo\Stored Procedures\sp_init_pf.sql" />
+    <Build Include="dbo\Stored Procedures\sp_init_conv_ppto.sql" />
+    <Build Include="dbo\Stored Procedures\sp_update_forecast.sql" />
+    <Build Include="dbo\Stored Procedures\sp_partidas_indivduales_gasto_real.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="sql control 2020.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sql control 2020.publish.xml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Control_2020"
+  DTS:DTSID="{2597876E-BC88-4E88-9334-19DFBCDD452D}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PMO Control Gasto TI 2020 DEV New;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-{2597876E-BC88-4E88-9334-19DFBCDD452D}Control_2020;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

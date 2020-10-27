@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="338fa5b7-d460-40aa-9be2-0c31f8665e94" ChangeDateTime="10/27/2020 17:21:44">
+    <Property Name="ElementName" Value="[dbo].[fact_gasto_ppto].[IX_fact_gasto_ppto_Column]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[dbo].[fact_gasto_ppto]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[IX_fact_gasto_ppto_fecha]" />
+  </Operation>
+</Operations>
