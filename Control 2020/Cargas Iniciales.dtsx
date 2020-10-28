@@ -10719,11 +10719,11 @@ order by
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Init Parámetros\Carga Parametros\Origen OData.Connections[Conexión]"
+                      refId="Package\Init Parámetros\Carga Parametros\Origen OData.Connections[Connection]"
                       connectionManagerID="Package.ConnectionManagers[OData_Shp]"
                       connectionManagerRefId="Package.ConnectionManagers[OData_Shp]"
                       description="Conexión al servicio OData"
-                      name="Conexión" />
+                      name="Connection" />
                   </connections>
                   <outputs>
                     <output
