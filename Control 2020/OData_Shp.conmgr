@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OData_Shp"
+  DTS:DTSID="{08CE894B-09CC-4AB0-85E8-A68667D1DB52}"
+  DTS:CreationName="ODATA">
+  <DTS:ObjectData>
+    <ODataConnectionManager
+      UserName=""
+      Url="http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/listdata.svc"
+      ConnectionString="Service Document Url=http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=SSPI;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104"
+      MicrosoftOnlineServicesAuth="False"
+      AuthType="WindowsAuthentication"
+      ConnectByProxy="False" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
