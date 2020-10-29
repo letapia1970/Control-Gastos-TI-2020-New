@@ -138,6 +138,8 @@
     <Build Include="dbo\Stored Procedures\sp_init_conv_ppto.sql" />
     <Build Include="dbo\Stored Procedures\sp_update_forecast.sql" />
     <Build Include="dbo\Stored Procedures\sp_partidas_indivduales_gasto_real.sql" />
+    <Build Include="dbo\Stored Procedures\sp_shp_update_ctas.sql" />
+    <Build Include="dbo\Functions\lookup_shp.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="sql control 2020.refactorlog" />

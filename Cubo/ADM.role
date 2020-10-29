@@ -1,0 +1,33 @@
+﻿<Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Role 4</ID>
+  <Name>ADM</Name>
+  <CreatedTimestamp>2020-01-10T17:23:41.736667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2020-05-19T22:10:46.703333Z</LastSchemaUpdate>
+  <Description>Gerencia de Administración</Description>
+  <Members>
+    <Member>
+      <Name>CMPC\GMoreno</Name>
+      <Sid>S-1-5-21-63527975-68424007-1908750753-42896</Sid>
+    </Member>
+    <Member>
+      <Name>CMPC\NOrtega</Name>
+      <Sid>S-1-5-21-63527975-68424007-1908750753-80717</Sid>
+    </Member>
+    <Member>
+      <Name>CMPC\JNirgi</Name>
+      <Sid>S-1-5-21-63527975-68424007-1908750753-75952</Sid>
+    </Member>
+    <Member>
+      <Name>CMPC\JPinillo</Name>
+      <Sid>S-1-5-21-63527975-68424007-1908750753-53337</Sid>
+    </Member>
+    <Member>
+      <Name>CMPC\JPerez</Name>
+      <Sid>S-1-5-21-63527975-68424007-1908750753-79412</Sid>
+    </Member>
+    <Member>
+      <Name>CMPCTISS\RCANALES</Name>
+      <Sid>S-1-5-21-139466027-1720074298-1811762917-1661</Sid>
+    </Member>
+  </Members>
+</Role>

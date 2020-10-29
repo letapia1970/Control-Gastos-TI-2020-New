@@ -1,0 +1,117 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="21bdbfae-4a01-4d2f-a1be-fa3bf8240ba4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cubo Control 2020</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>View Gasto Ppto</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="80d757f5-a148-4bb8-b891-c26373889cb7">
+          <ID>View Gasto Ppto</ID>
+          <Name>View Gasto Ppto</Name>
+          <CreatedTimestamp>2020-01-10T16:52:55.233333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2020-05-19T22:10:56.343333Z</LastSchemaUpdate>
+          <LastProcessed>2020-10-28T14:04:40.843333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="864f3754-afa6-4e05-84f9-2726f87aeefb">
+            <DataSourceViewID>Control 2020</DataSourceViewID>
+            <TableID>dbo_view_gasto_ppto</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="bdeeb85f-64e8-4dde-8ce5-a2746ec33af5">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="a084304f-abca-4eca-9549-af98b13c36bc" />
+          </ProactiveCaching>
+          <EstimatedSize>7291845</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>View Gasto Real</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4bd73847-283e-46e9-b1e5-327616fa23a0">
+          <ID>View Gasto Real</ID>
+          <Name>View Gasto Real</Name>
+          <CreatedTimestamp>2020-01-10T16:52:55.28Z</CreatedTimestamp>
+          <LastSchemaUpdate>2020-05-19T22:10:56.53Z</LastSchemaUpdate>
+          <LastProcessed>2020-10-28T14:05:02.543333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="998c0429-618a-4253-954d-b3b3244e4e3e">
+            <DataSourceViewID>Control 2020</DataSourceViewID>
+            <TableID>dbo_view_gasto_real</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="8a7bdf26-96d7-4078-9d3e-d9a443188291">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="e3ee525b-a199-4329-851d-79d43a8694ed" />
+          </ProactiveCaching>
+          <EstimatedSize>25807016</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Tipos De Cambio</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="490bf0c1-c0af-4afc-b240-9e26eb1234ab">
+          <ID>Tipos De Cambio</ID>
+          <Name>Tipos De Cambio</Name>
+          <CreatedTimestamp>2020-02-29T19:42:55.863333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2020-05-19T22:10:56.67Z</LastSchemaUpdate>
+          <LastProcessed>2020-10-28T14:04:28.86Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="fde9062e-e36b-4e7f-b474-6e049e965633">
+            <DataSourceViewID>Control 2020</DataSourceViewID>
+            <TableID>dbo_fact_conversion_real</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="08f20c6c-e41e-4649-85d8-64720df4693b">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="f48ba015-a45d-4f7b-928e-7b6464702f70" />
+          </ProactiveCaching>
+          <EstimatedSize>108386</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>View Forecast</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d71ddd37-7941-4b29-aaac-601e2db52dd5">
+          <ID>View Forecast</ID>
+          <Name>View Forecast</Name>
+          <CreatedTimestamp>2020-05-07T18:58:51.81Z</CreatedTimestamp>
+          <LastSchemaUpdate>2020-05-19T22:10:56.92Z</LastSchemaUpdate>
+          <LastProcessed>2020-10-28T14:05:12.87Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b5bd97b9-47b8-4847-8c4b-0848147400ab">
+            <DataSourceViewID>Control 2020</DataSourceViewID>
+            <TableID>dbo_view_forecast</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="cab71997-4eb7-4e56-ad04-468f490c6ef6">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="4b19d4d8-23a2-4bf6-b02b-5352cfa16156" />
+          </ProactiveCaching>
+          <EstimatedSize>239116</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
