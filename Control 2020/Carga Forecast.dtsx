@@ -12,8 +12,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Carga Forecast"
   DTS:PackageType="5"
-  DTS:VersionBuild="69"
-  DTS:VersionGUID="{74184025-3669-4E0E-ADE1-1C92C4017316}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{478CF10C-D3CB-4382-B178-EC3C8628CE74}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -41,6 +41,7 @@
       DTS:refId="Package\Carga Cambios Forecast"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
+      DTS:Disabled="True"
       DTS:DTSID="{F15AD2AD-ADC4-47C7-ABCE-030526AA6A0D}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -56,7 +57,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Cambios Forecast"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1585,7 +1586,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Forecast"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3527,6 +3528,7 @@
       DTS:refId="Package\Update USD"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Actualiza monto USD con tipos de cambio de forecast"
+      DTS:Disabled="True"
       DTS:DTSID="{1AC451B8-9EA5-4861-9547-FDF629CBD661}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -3572,27 +3574,27 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="136,44"
+          Size="154,44"
           Id="Package\Carga Cambios Forecast\Borra Cambios Forecast"
           TopLeft="7.54716981132077,8.47169811320754" />
         <NodeLayout
-          Size="136,44"
+          Size="164,44"
           Id="Package\Carga Cambios Forecast\df Carga Cambios Forecast"
           TopLeft="7.54716981132077,97.3018867924528" />
         <EdgeLayout
           Id="Package\Carga Cambios Forecast.PrecedenceConstraints[Constraint]"
-          TopLeft="75.433962264151,52.3962264150943">
+          TopLeft="87.0471698113208,52.4716981132075">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="0,44.9056603773585"
+              EndConnector="0,44.8301886792453"
               Start="0,0"
-              End="0,37.4056603773585">
+              End="0,37.3301886792453">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.4056603773585" />
+                    End="0,37.3301886792453" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3604,10 +3606,10 @@
         <ContainerLayout
           HeaderHeight="43.924528301886795"
           IsExpanded="True"
-          PanelSize="197,148"
-          Size="197,192"
+          PanelSize="183,154"
+          Size="183,198"
           Id="Package\Carga Cambios Forecast"
-          TopLeft="268.103773584906,5.5377358490566" />
+          TopLeft="261.103773584906,61.5377358490566" />
         <NodeLayout
           Size="136,44"
           Id="Package\Carga Gasto Forecast\Borra Forecast"
@@ -3644,14 +3646,14 @@
           PanelSize="177,139"
           Size="177,183"
           Id="Package\Carga Gasto Forecast"
-          TopLeft="5.5,5.5" />
+          TopLeft="5.5,65.5" />
         <NodeLayout
           Size="136,42"
           Id="Package\Update USD"
-          TopLeft="190.820754716981,257.650943396226" />
+          TopLeft="190.820754716981,317.650943396226" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="94,188.5">
+          TopLeft="94,248.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3685,30 +3687,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="366.603773584906,197.537735849057">
+          TopLeft="352.603773584906,259.537735849057">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-86.4496855345917,60.1132075471694"
+              EndConnector="-72.4496855345917,58.1132075471694"
               Start="0,0"
-              End="-86.4496855345917,52.6132075471694">
+              End="-72.4496855345917,50.6132075471694">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.6485300570423" />
+                    End="0,30.4624835454144" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.6485300570423"
-                    Point2="0,35.6485300570423"
-                    Point3="-4,35.6485300570423" />
+                    Point1="0,30.4624835454144"
+                    Point2="0,34.4624835454144"
+                    Point3="-4,34.4624835454144" />
                   <mssgle:LineSegment
-                    End="-82.4496855345917,35.6485300570423" />
+                    End="-68.4496855345917,34.4624835454144" />
                   <mssgle:CubicBezierSegment
-                    Point1="-82.4496855345917,35.6485300570423"
-                    Point2="-86.4496855345917,35.6485300570423"
-                    Point3="-86.4496855345917,39.6485300570423" />
+                    Point1="-68.4496855345917,34.4624835454144"
+                    Point2="-72.4496855345917,34.4624835454144"
+                    Point3="-72.4496855345917,38.4624835454144" />
                   <mssgle:LineSegment
-                    End="-86.4496855345917,52.6132075471694" />
+                    End="-72.4496855345917,50.6132075471694" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3724,7 +3726,7 @@
     design-time-name="Package\Carga Cambios Forecast\df Carga Cambios Forecast">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="136,44"
           Id="Package\Carga Cambios Forecast\df Carga Cambios Forecast\id claves"
@@ -3792,9 +3794,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3816,9 +3816,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3840,9 +3838,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3868,9 +3864,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3896,9 +3890,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3924,9 +3916,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3952,9 +3942,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3976,9 +3964,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4000,9 +3986,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4069,7 +4053,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4115,7 +4101,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4137,7 +4125,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

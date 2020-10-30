@@ -155,5 +155,25 @@
         <DeploymentServerEdition>Standard</DeploymentServerEdition>
       </Options>
     </Configuration>
+    <Configuration>
+      <Name>Dev ds192</Name>
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Control 2020</Id>
+            <Name>Control 2020</Name>
+            <Value xsi:type="xsd:string">Provider=MSOLEDBSQL.1;Data Source=(localdb)\MSSQLLocalDB;Integrated Security=SSPI;Initial Catalog=PMO Control Gasto TI 2020 DEV New</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Control 2020</Id>
+            <Name>Control 2020</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+        <DeploymentServerEdition>Standard</DeploymentServerEdition>
+      </Options>
+    </Configuration>
   </Configurations>
 </Project>

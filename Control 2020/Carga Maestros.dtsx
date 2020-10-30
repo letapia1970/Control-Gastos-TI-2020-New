@@ -12,8 +12,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Carga Maestros"
   DTS:PackageType="5"
-  DTS:VersionBuild="115"
-  DTS:VersionGUID="{C791FD70-81FC-4F6E-B148-70269DBCD7FD}">
+  DTS:VersionBuild="117"
+  DTS:VersionGUID="{B722ED0E-8B45-4D4A-B072-1CEC1869E93F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -34,20 +34,20 @@
       DTS:ObjectName="Shp_ws">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="http://sppmo.cmpc.cl/dev/ppto2021/_vti_bin/UserGroup.asmx?wsdl">
+          DTS:ConnectionString="http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/UserGroup.asmx?wsdl">
           <DTS:HttpConnection
-            DTS:ServerURL="http://sppmo.cmpc.cl/dev/ppto2021/_vti_bin/UserGroup.asmx?wsdl"
+            DTS:ServerURL="http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/UserGroup.asmx?wsdl"
             DTS:UseServerCredentials="True"
             DTS:ServerUserName="ltapia"
             DTS:ServerDomain="cmpc">
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADccBTPaGCTwESKJr6mlKh58wJPh4yrLQ9BiQ7J5IO/gAAAAAAOgAAAAAIAACAAAAAhjGFSWR9Yhpq/tSn2mt99tN1Fjk6WP38pdrSNInawySAAAADt+tL8v6avZ2WwMXsQpiAmoIjzxfOFbhhanOUz8poHXUAAAACmESUjLwRgcwuyilobBYrFWQtkT0jFoLtoSDf5nbH3Y2qcw6237rKiPORJqJJtn9f8EsUS4AHKAIHn6jU9dYCf</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADq2JAWiOs/PqzBiSdqIRb3iGETPk21/B7VznKOE8gDRwAAAAAOgAAAAAIAACAAAAAzdzL0PNe1PNqTlf4P5Fm9wBt3DK0U/jRr67Z8b7Sk4iAAAADP6pZyVnPAj/rdHTCDhn5RJLww672BRl/Rv0Yl9YMpwkAAAADM/7R95L1oVQBnlWAHqjyveobzjpPmx635FJbuo7ikxHR4ybuvoV2CdA/8j0yjrEv2x9n/URqa2esIQBqTdXyK</DTS:Property>
             <DTS:Property
               DTS:Name="ProxyPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABvHxeD8P6oKED8y49CoMkFrEwVA5LXm+cEkEhcvhmTEAAAAAAOgAAAAAIAACAAAAD/8kfYw0k7LOv4N4X6Te8CMCR6UrSt3A8MYx3puGl2tRAAAAAenpWy8J8h9QHguG38orF5QAAAAHSphmA2T6SR0vTN5D/YOlkj7+i6HBfDa/vK5FJUncyjaE2RqKNM5XXN4TZQo5nJdYi0+2OlViiZ8aTdra+pPu4</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACYFkDOJKOwlqMf1qsToJctGJ7mAqp0P1Q5EGjTF61ShQAAAAAOgAAAAAIAACAAAACAdJYvlRZ5qXXyoTfP4DQg0Tb/HMu7oepCSSmqC0tpkxAAAACrrv28VdhmQH/+TboD/ilgQAAAABR5E1aPZJ0Ht4JG5XL7IbIpB7cFSvOmJJ0AedpS1URH6lU4Mk8+kXbzTxE6amekuuL/esR8Y6AwGy39NipO6KE</DTS:Property>
           </DTS:HttpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -2988,7 +2988,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Cuentas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3005,7 +3005,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="update ids shp"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4026,7 +4026,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Categorias"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4731,7 +4731,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init cecos control"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4770,7 +4770,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init shp users"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5107,6 +5107,16 @@
                           name="ID"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Sid]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Sid]"
+                          length="255"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Sid]"
+                          name="Sid"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
                           refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Name]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversión"
@@ -5115,6 +5125,74 @@
                           length="255"
                           lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Name]"
                           name="Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[LoginName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[LoginName]"
+                          length="255"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[LoginName]"
+                          name="LoginName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Email]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Email]"
+                          length="255"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Email]"
+                          name="Email"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Notes]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Notes]"
+                          length="255"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Notes]"
+                          name="Notes"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[IsSiteAdmin]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[IsSiteAdmin]"
+                          length="255"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[IsSiteAdmin]"
+                          name="IsSiteAdmin"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[IsDomainGroup]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[IsDomainGroup]"
+                          length="255"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[IsDomainGroup]"
+                          name="IsDomainGroup"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Flags]"
+                          dataType="ui1"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Flags]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Flags]"
+                          name="Flags"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Users_Id]"
+                          dataType="ui8"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Users_Id]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Users_Id]"
+                          name="Users_Id"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
@@ -5455,7 +5533,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Tarea Servicio Web"
           DTS:TaskContact="Web Service Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="WsdlFile">@[$Package::TareaServicioWeb_WsdlFile]</DTS:PropertyExpression>
@@ -6397,7 +6475,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Monedas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8025,7 +8103,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Org"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8072,7 +8150,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Parametros"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9210,7 +9288,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init dim PF"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9227,7 +9305,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Periodos"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10304,7 +10382,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Proveedores"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10474,6 +10552,93 @@
           Size="160,172"
           Id="Package\Cecos Control"
           TopLeft="500.254716981132,250.160377358491" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Contenedor de secuencias\Init shp users"
+          TopLeft="18,12" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos"
+          TopLeft="82,91" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Contenedor de secuencias\Tarea Servicio Web"
+          TopLeft="178,15" />
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción]"
+          TopLeft="89.5,54">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="80.5,37"
+              Start="0,0"
+              End="80.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="76.5,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.5,18.5"
+                    Point2="80.5,18.5"
+                    Point3="80.5,22.5" />
+                  <mssgle:LineSegment
+                    End="80.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción 1]"
+          TopLeft="263,57">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-65,34"
+              Start="0,0"
+              End="-65,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.2162162162162" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.2162162162162"
+                    Point2="0,20.2162162162162"
+                    Point3="-4,20.2162162162162" />
+                  <mssgle:LineSegment
+                    End="-61,20.2162162162162" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-61,20.2162162162162"
+                    Point2="-65,20.2162162162162"
+                    Point3="-65,24.2162162162162" />
+                  <mssgle:LineSegment
+                    End="-65,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="352,188"
+          Size="352,231"
+          Id="Package\Contenedor de secuencias"
+          TopLeft="706,408" />
         <NodeLayout
           Size="136,44"
           Id="Package\Monedas\Carga Monedas"
@@ -10727,93 +10892,6 @@
           Size="160,172"
           Id="Package\Proveedores"
           TopLeft="521.952830188679,35.7452830188679" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Contenedor de secuencias\Init shp users"
-          TopLeft="18,12" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Contenedor de secuencias\Tarea Servicio Web"
-          TopLeft="178,15" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Contenedor de secuencias\Tarea Flujo de datos"
-          TopLeft="82,91" />
-        <EdgeLayout
-          Id="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción]"
-          TopLeft="89.5,54">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="80.5,37"
-              Start="0,0"
-              End="80.5,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5"
-                    Point2="0,18.5"
-                    Point3="4,18.5" />
-                  <mssgle:LineSegment
-                    End="76.5,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="76.5,18.5"
-                    Point2="80.5,18.5"
-                    Point3="80.5,22.5" />
-                  <mssgle:LineSegment
-                    End="80.5,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción 1]"
-          TopLeft="263,57">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-65,34"
-              Start="0,0"
-              End="-65,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.2162162162162" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.2162162162162"
-                    Point2="0,20.2162162162162"
-                    Point3="-4,20.2162162162162" />
-                  <mssgle:LineSegment
-                    End="-61,20.2162162162162" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-61,20.2162162162162"
-                    Point2="-65,20.2162162162162"
-                    Point3="-65,24.2162162162162" />
-                  <mssgle:LineSegment
-                    End="-65,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="352,188"
-          Size="352,231"
-          Id="Package\Contenedor de secuencias"
-          TopLeft="706,408" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -11969,6 +12047,97 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Contenedor de secuencias\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\ids"
+          TopLeft="657,198" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB"
+          TopLeft="648,305" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML"
+          TopLeft="654,47" />
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[User]"
+          TopLeft="720.5,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="10.5,109"
+              Start="0,0"
+              End="10.5,101.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.5"
+                    Point2="0,54.5"
+                    Point3="4,54.5" />
+                  <mssgle:LineSegment
+                    End="6.5,54.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,54.5"
+                    Point2="10.5,54.5"
+                    Point3="10.5,58.5" />
+                  <mssgle:LineSegment
+                    End="10.5,101.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-5.34263671875,59.5,21.1852734375,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+          TopLeft="731.5,240">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Monedas\Carga Monedas">
     <LayoutInfo>
       <GraphLayout
@@ -13021,97 +13190,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Proveedores\Carga Proveedores\Graba Proveedores">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Contenedor de secuencias\Tarea Flujo de datos">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML"
-          TopLeft="654,47" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\ids"
-          TopLeft="657,198" />
-        <EdgeLayout
-          Id="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[User]"
-          TopLeft="720.5,89">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="10.5,109"
-              Start="0,0"
-              End="10.5,101.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50.5"
-                    Point2="0,54.5"
-                    Point3="4,54.5" />
-                  <mssgle:LineSegment
-                    End="6.5,54.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.5,54.5"
-                    Point2="10.5,54.5"
-                    Point3="10.5,58.5" />
-                  <mssgle:LineSegment
-                    End="10.5,101.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-5.34263671875,59.5,21.1852734375,9.421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB"
-          TopLeft="648,305" />
-        <EdgeLayout
-          Id="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-          TopLeft="731.5,240">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,65"
-              Start="0,0"
-              End="0,57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

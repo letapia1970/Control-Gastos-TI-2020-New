@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">NBLTP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAACAAAAAAAQZgAAAAEAACAAAAAo/3PV7tAMnLUhLepgHR4/uRIQtGaPoLqQDOmMpZpv3gAAAAAOgAAAAAIAACAAAAAOmFIhtvEzte4qqmqubULgbAuuW2lWVugsQOxQtofBnpAAAADy74x8vWhUSNF0zezw9fLzvIuCJGqkRUVL4PL3fIOrLGrazAELMTzZ4LkuJWPnvWA3c4UQnKW89LlshdzHlAWHpKmj6GfbHZUUrxNYOP7TF+P0D8+RmqIWtlbogv8ExX14qzhdWcHEffeHwTKg9pTVdd8QDbAkbyWeQZozcg2fXhRJQInSANtczF8nLPFfbSFAAAAA3V/iK9Do+qTouinScbKlRTAG2SfSVTbBWH++sY+9EIz2IQy/KF6US3SgLNRqUpibi8/CekEEHal6hbBds7yq/A==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAACAAAAAAAQZgAAAAEAACAAAADVLWOYOcZynA2LV9VzL9HG1o16BFpkqn7hUwrLQxbqlAAAAAAOgAAAAAIAACAAAAC6lDctU3qvazgdY8cXoRsD+cGQA8sF3W/H/dGGtKS075AAAAAIrHvnqxy72YJGGZ8bgjBOM/XPYbi07qaNr3hgKq0nn0grgNC2UyMFHNJ7s+yWaKSi/nuISsm5IUsStk3wSh8Yh2DpaPTEc/8RScrjPFTOR0b4/DzHJQx8BAPouyt8nnD40vIpwrCLkfSUcsyLyF0LwtpDDlePffpDrTvJckGpQlqJpBMdovru1rTM+BBW2QJAAAAAunhbD43v0iOS6In/ucxft5TlQgnJRvw4FFe8YMVa1h2oW0MvysBTUxDarA0SIiFTjBo9j1rAASq/0fWog38JUw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -964,10 +964,10 @@
                 <SSIS:Property SSIS:Name="Name">Carga Maestros</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">115</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">116</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C791FD70-81FC-4F6E-B148-70269DBCD7FD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7FA453F1-FC65-4CF6-A6B2-5C2CF39775D5}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1072,8 +1072,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1118,7 +1116,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">http://sppmo.cmpc.cl/dev/ppto2021/_vti_bin/UserGroup.asmx?wsdl</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/UserGroup.asmx?wsdl</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1133,8 +1131,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1163,8 +1159,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1179,8 +1173,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1224,7 +1216,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">http://sppmo.cmpc.cl/dev/ppto2021/_vti_bin/UserGroup.asmx?wsdl</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/UserGroup.asmx?wsdl</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1480,8 +1472,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1523,10 +1513,10 @@
                 <SSIS:Property SSIS:Name="Name">Gasto Real</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">149</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">155</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{9CA7F628-EC51-44E5-839F-5288CBA4C906}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{200CFA13-F429-415B-8120-BDD95941877C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2843,8 +2833,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2877,6 +2865,30 @@
   <Configurations>
     <Configuration>
       <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2019</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2020-10-27T21:04:41.4941761Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Dev ds192</Name>
       <Options>
         <OutputPath>bin</OutputPath>
         <ConnectionMappings />
