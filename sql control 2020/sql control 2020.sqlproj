@@ -140,11 +140,13 @@
     <Build Include="dbo\Stored Procedures\sp_partidas_indivduales_gasto_real.sql" />
     <Build Include="dbo\Stored Procedures\sp_shp_update_ctas.sql" />
     <Build Include="dbo\Functions\lookup_shp.sql" />
+    <Build Include="dbo\Stored Procedures\sp_shp_update_forecast.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="sql control 2020.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="sql control 2020.publish.xml" />
+    <None Include="sql control 2020 ds192.publish.xml" />
   </ItemGroup>
 </Project>

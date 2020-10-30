@@ -14,6 +14,8 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
+	exec sp_shp_update_forecast
+
 	update
 		fact_gasto_forecast
 	set

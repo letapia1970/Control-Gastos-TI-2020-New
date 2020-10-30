@@ -12,11 +12,46 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Carga Maestros"
   DTS:PackageType="5"
-  DTS:VersionBuild="114"
-  DTS:VersionGUID="{A8B703FF-614B-4A1F-986C-1B25264EAEE7}">
+  DTS:VersionBuild="115"
+  DTS:VersionGUID="{C791FD70-81FC-4F6E-B148-70269DBCD7FD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[shp_users.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{27C48EDA-843A-4E8A-9735-3D84E40B700F}"
+      DTS:ObjectName="shp_users.xml">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\letap\source\repos\Control Gastos TI 2020\Control 2020\wssp\shp_users.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Shp_ws]"
+      DTS:CreationName="HTTP"
+      DTS:DTSID="{312AF09E-9AE2-4149-8D21-488195DD9287}"
+      DTS:ObjectName="Shp_ws">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="http://sppmo.cmpc.cl/dev/ppto2021/_vti_bin/UserGroup.asmx?wsdl">
+          <DTS:HttpConnection
+            DTS:ServerURL="http://sppmo.cmpc.cl/dev/ppto2021/_vti_bin/UserGroup.asmx?wsdl"
+            DTS:UseServerCredentials="True"
+            DTS:ServerUserName="ltapia"
+            DTS:ServerDomain="cmpc">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADccBTPaGCTwESKJr6mlKh58wJPh4yrLQ9BiQ7J5IO/gAAAAAAOgAAAAAIAACAAAAAhjGFSWR9Yhpq/tSn2mt99tN1Fjk6WP38pdrSNInawySAAAADt+tL8v6avZ2WwMXsQpiAmoIjzxfOFbhhanOUz8poHXUAAAACmESUjLwRgcwuyilobBYrFWQtkT0jFoLtoSDf5nbH3Y2qcw6237rKiPORJqJJtn9f8EsUS4AHKAIHn6jU9dYCf</DTS:Property>
+            <DTS:Property
+              DTS:Name="ProxyPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABvHxeD8P6oKED8y49CoMkFrEwVA5LXm+cEkEhcvhmTEAAAAAAOgAAAAAIAACAAAAD/8kfYw0k7LOv4N4X6Te8CMCR6UrSt3A8MYx3puGl2tRAAAAAenpWy8J8h9QHguG38orF5QAAAAHSphmA2T6SR0vTN5D/YOlkj7+i6HBfDa/vK5FJUncyjaE2RqKNM5XXN4TZQo5nJdYi0+2OlViiZ8aTdra+pPu4</DTS:Property>
+          </DTS:HttpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[sociedades_cecos]"
       DTS:CreationName="FLATFILE"
@@ -85,6 +120,35 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{F4DFD0BA-C39E-4CB8-9B05-25C0A28DD4E3}"
+      DTS:ObjectName="TareaFlujoDeDatos_OrigenXMLXMLData">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\letap\source\repos\Control Gastos TI 2020\Control 2020\wssp\shp_users.xml</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{55BAD7AD-CA53-4057-8B06-6949F83A1F30}"
+      DTS:ObjectName="TareaFlujoDeDatos_OrigenXMLXMLSchemaDefinition">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\letap\source\repos\Control Gastos TI 2020\Control 2020\wssp\shp_users..xsd</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{F33FB059-21F3-48F6-ACF5-26C8D3D8369B}"
+      DTS:ObjectName="TareaServicioWeb_WsdlFile">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\letap\source\repos\Control Gastos TI 2020\Control 2020\wssp\shp_ws.wsdl</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -2812,12 +2876,12 @@
                   name="Derived Column Output"
                   startId="Package\Carga Cuentas\Carga Cuentas\ids null.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output3]"
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output2]"
                   endId="Package\Carga Cuentas\Carga Cuentas\Multidifusión 1 1.Inputs[Entrada de Multidifusión 1]"
                   name="Derived Column Output"
                   startId="Package\Carga Cuentas\Carga Cuentas\ids null g02.Outputs[Derived Column Output]" />
                 <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output2]"
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output3]"
                   endId="Package\Carga Cuentas\Carga Cuentas\Multidifusión 1.Inputs[Entrada de Multidifusión 1]"
                   name="Derived Column Output"
                   startId="Package\Carga Cuentas\Carga Cuentas\ids null g01.Outputs[Derived Column Output]" />
@@ -2827,25 +2891,35 @@
                   name="Output"
                   startId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output]" />
                 <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Output2]"
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Output1]"
                   endId="Package\Carga Cuentas\Carga Cuentas\ids null g02.Inputs[Derived Column Input]"
                   name="Output"
                   startId="Package\Carga Cuentas\Carga Cuentas\Lee Grupo 02.Outputs[Output]" />
                 <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Output1]"
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Output2]"
                   endId="Package\Carga Cuentas\Carga Cuentas\ids null g01.Inputs[Derived Column Input]"
                   name="Output"
                   startId="Package\Carga Cuentas\Carga Cuentas\Lee Grupo 01.Outputs[Output]" />
                 <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 5]"
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 7]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids_shp.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g02.Outputs[Salida de columna derivada]" />
+                <path
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 6]"
+                  name="Salida de columna derivada"
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids g02.Outputs[Salida de columna derivada]" />
+                <path
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  name="Salida de columna derivada"
+                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g02.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada3]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 3]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g01.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada2]"
                   endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 4]"
@@ -2853,26 +2927,16 @@
                   startId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 3]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 1]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids g01.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 5]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g02.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids_shp.Outputs[Salida de columna derivada]" />
                 <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 6]"
-                  name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids g02.Outputs[Salida de columna derivada]" />
-                <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 7]"
-                  name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g02.Outputs[Salida de columna derivada]" />
-                <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 11]"
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 1]"
                   endId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Inputs[Entrada de columna derivada]"
                   name="Salida de multidifusión 1"
                   startId="Package\Carga Cuentas\Carga Cuentas\Multidifusión 1.Outputs[Salida de multidifusión 1]" />
@@ -2882,7 +2946,7 @@
                   name="Salida de Multidifusión 1"
                   startId="Package\Carga Cuentas\Carga Cuentas\Multidifusión 1.Outputs[Salida de Multidifusión 1]" />
                 <path
-                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 1]"
+                  refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 11]"
                   endId="Package\Carga Cuentas\Carga Cuentas\Ctas en g01.Inputs[Entrada de columna derivada]"
                   name="Salida de multidifusión 1"
                   startId="Package\Carga Cuentas\Carga Cuentas\Multidifusión.Outputs[Salida de multidifusión 1]" />
@@ -2924,7 +2988,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Cuentas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2941,7 +3005,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="update ids shp"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3962,7 +4026,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Categorias"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4667,7 +4731,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init cecos control"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4685,6 +4749,748 @@
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
           DTS:To="Package\Cecos Control\Carga Cecos de Control" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Contenedor de secuencias"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contenedor de secuencias"
+      DTS:DTSID="{A53075CF-785F-4484-BA07-BF318ADC6F73}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Contenedor de secuencias">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Contenedor de secuencias\Init shp users"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tarea Ejecutar SQL"
+          DTS:DTSID="{5577E893-7AA8-4254-92AF-9B27D28DC7D0}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Init shp users"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{2597876E-BC88-4E88-9334-19DFBCDD452D}"
+              SQLTask:SqlStatementSource="exec sp_init_hierarchy 'RAIZ.shp.user'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Contenedor de secuencias\Tarea Flujo de datos"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tarea Flujo de datos"
+          DTS:DTSID="{D9946823-6A00-4B0C-A6BD-523F7187B277}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarea Flujo de datos"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="[Origen XML].[XMLData]">@[$Package::TareaFlujoDeDatos_OrigenXMLXMLData]</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="[Origen XML].[XMLSchemaDefinition]">@[$Package::TareaFlujoDeDatos_OrigenXMLXMLSchemaDefinition]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+                  description="Destino de OLE DB"
+                  name="Destino de OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                      name="OpenRowset">[dbo].[dim_jerarquias]</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL para ejecutar."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Connections[OleDbConnection]"
+                      connectionManagerID="{2597876E-BC88-4E88-9334-19DFBCDD452D}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Control_2020]"
+                      description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                      errorOrTruncationOperation="Insertar"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Entrada de destino de OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="id"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada].Columns[id]" />
+                        <inputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[xml_data]"
+                          cachedDataType="wstr"
+                          cachedLength="268"
+                          cachedName="xml_data"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[xml_data]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada].Columns[xml_data]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id]"
+                          dataType="wstr"
+                          length="255"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[level]"
+                          dataType="i4"
+                          name="level" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[xml_data]"
+                          dataType="nText"
+                          name="xml_data" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[node]"
+                          dataType="wstr"
+                          length="255"
+                          name="node" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_parent]"
+                          dataType="wstr"
+                          length="255"
+                          name="id_parent" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Salida de error de destino de OLE DB"
+                      synchronousInputId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+                  description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+                  name="ids"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Inputs[Entrada de columna derivada]"
+                      description="Entrada en la transformación Columna derivada"
+                      name="Entrada de columna derivada">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Inputs[Entrada de columna derivada].Columns[ID]"
+                          cachedDataType="ui4"
+                          cachedName="ID"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[ID]" />
+                        <inputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Inputs[Entrada de columna derivada].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Name"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Name]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada]"
+                      description="Salida predeterminada de la transformación Columna derivada"
+                      exclusionGroup="1"
+                      name="Salida de columna derivada"
+                      synchronousInputId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Inputs[Entrada de columna derivada]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada].Columns[id]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Cálculo"
+                          errorRowDisposition="FailComponent"
+                          length="20"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada].Columns[id]"
+                          name="id"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expresión de columna derivada"
+                              name="Expression">"RAIZ.shp.user." + (DT_WSTR,6)#{Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[ID]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expresión descriptiva de columna derivada"
+                              expressionType="Notify"
+                              name="FriendlyExpression">"RAIZ.shp.user." + (DT_WSTR,6)ID</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada].Columns[xml_data]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Cálculo"
+                          errorRowDisposition="FailComponent"
+                          length="268"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada].Columns[xml_data]"
+                          name="xml_data"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expresión de columna derivada"
+                              name="Expression">"&lt;node&gt;" + #{Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Name]} + "&lt;/node&gt;"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expresión descriptiva de columna derivada"
+                              expressionType="Notify"
+                              name="FriendlyExpression">"&lt;node&gt;" + Name + "&lt;/node&gt;"</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de error de columna derivada]"
+                      description="Salida de error de la transformación Columna derivada"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Salida de error de columna derivada"
+                      synchronousInputId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Inputs[Entrada de columna derivada]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+                  description="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML."
+                  name="Origen XML"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                    <property
+                      dataType="System.String"
+                      description="Datos XML que usa el adaptador de origen XML."
+                      expressionType="Notify"
+                      name="XMLData">C:\Users\letap\source\repos\Control Gastos TI 2020\Control 2020\wssp\shp_users.xml</property>
+                    <property
+                      dataType="System.String"
+                      description="Variable que usa el adaptador de origen XML para especificar datos XML."
+                      name="XMLDataVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Define cómo obtiene el adaptador de origen XML los datos XML."
+                      name="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Definición de esquema XML que usa el adaptador de origen XML."
+                      expressionType="Notify"
+                      name="XMLSchemaDefinition">C:\Users\letap\source\repos\Control Gastos TI 2020\Control 2020\wssp\shp_users..xsd</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Identifica si se usará el esquema insertado."
+                      name="UseInlineSchema">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Define cómo se asignan los tipos de enteros XML."
+                      name="XMLIntegerMapping"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+                  </properties>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User]"
+                      name="User">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Identifica el conjunto de filas asociado a la salida."
+                          name="RowsetID">User</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[ID]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[ID]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[ID]"
+                          name="ID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Name]"
+                          length="255"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].Columns[Name]"
+                          name="Name"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[ID]"
+                          dataType="ui4"
+                          name="ID">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.UInt32</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Sid]"
+                          dataType="wstr"
+                          length="255"
+                          name="Sid">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Name">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[LoginName]"
+                          dataType="wstr"
+                          length="255"
+                          name="LoginName">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Email]"
+                          dataType="wstr"
+                          length="255"
+                          name="Email">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Notes]"
+                          dataType="wstr"
+                          length="255"
+                          name="Notes">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[IsSiteAdmin]"
+                          dataType="wstr"
+                          length="255"
+                          name="IsSiteAdmin">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[IsDomainGroup]"
+                          dataType="wstr"
+                          length="255"
+                          name="IsDomainGroup">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Flags]"
+                          dataType="ui1"
+                          name="Flags">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.Byte</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User].ExternalColumns[Users_Id]"
+                          dataType="ui8"
+                          name="Users_Id">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.UInt64</property>
+                          </properties>
+                        </externalMetadataColumn>
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User]"
+                      isErrorOut="true"
+                      name="Salida de error de User">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Identifica el conjunto de filas asociado a la salida."
+                          name="RowsetID">User</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[ID]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[ID]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[ID]"
+                          name="ID" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Sid]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Sid]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Sid]"
+                          name="Sid" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Name]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Name]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Name]"
+                          name="Name" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[LoginName]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[LoginName]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[LoginName]"
+                          name="LoginName" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Email]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Email]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Email]"
+                          name="Email" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Notes]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Notes]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Notes]"
+                          name="Notes" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[IsSiteAdmin]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[IsSiteAdmin]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[IsSiteAdmin]"
+                          name="IsSiteAdmin" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[IsDomainGroup]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[IsDomainGroup]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[IsDomainGroup]"
+                          name="IsDomainGroup" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Flags]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Flags]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Flags]"
+                          name="Flags" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Users_Id]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Users_Id]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[Users_Id]"
+                          name="Users_Id" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[ID]"
+                          dataType="nText"
+                          name="ID" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Sid]"
+                          dataType="nText"
+                          name="Sid" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Name]"
+                          dataType="nText"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[LoginName]"
+                          dataType="nText"
+                          name="LoginName" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Email]"
+                          dataType="nText"
+                          name="Email" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Notes]"
+                          dataType="nText"
+                          name="Notes" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[IsSiteAdmin]"
+                          dataType="nText"
+                          name="IsSiteAdmin" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[IsDomainGroup]"
+                          dataType="nText"
+                          name="IsDomainGroup" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Flags]"
+                          dataType="nText"
+                          name="Flags" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de User].ExternalColumns[Users_Id]"
+                          dataType="nText"
+                          name="Users_Id" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Users]"
+                      name="Users">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Identifica el conjunto de filas asociado a la salida."
+                          name="RowsetID">Users</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Users].Columns[Users_Id]"
+                          dataType="ui8"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Users].ExternalColumns[Users_Id]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Users].Columns[Users_Id]"
+                          name="Users_Id"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Users].ExternalColumns[Users_Id]"
+                          dataType="ui8"
+                          name="Users_Id">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.UInt64</property>
+                          </properties>
+                        </externalMetadataColumn>
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users]"
+                      isErrorOut="true"
+                      name="Salida de error de Users">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Identifica el conjunto de filas asociado a la salida."
+                          name="RowsetID">Users</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].Columns[Users_Id]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].ExternalColumns[Users_Id]"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].Columns[Users_Id]"
+                          name="Users_Id" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[Salida de error de Users].ExternalColumns[Users_Id]"
+                          dataType="nText"
+                          name="Users_Id" />
+                      </externalMetadataColumns>
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+                  endId="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  name="Salida de columna derivada"
+                  startId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Outputs[Salida de columna derivada]" />
+                <path
+                  refId="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[User]"
+                  endId="Package\Contenedor de secuencias\Tarea Flujo de datos\ids.Inputs[Entrada de columna derivada]"
+                  name="User"
+                  startId="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML.Outputs[User]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Contenedor de secuencias\Tarea Servicio Web"
+          DTS:CreationName="Microsoft.WebServiceTask"
+          DTS:Description="Tarea Servicio Web"
+          DTS:DTSID="{2674952E-EBE5-4378-A0E5-E70E33693FBB}"
+          DTS:ExecutableType="Microsoft.WebServiceTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarea Servicio Web"
+          DTS:TaskContact="Web Service Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="WsdlFile">@[$Package::TareaServicioWeb_WsdlFile]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <WSTask:WebServiceTaskData
+              WSTask:ConnectionName="{312AF09E-9AE2-4149-8D21-488195DD9287}"
+              WSTask:Service="UserGroup"
+              WSTask:WSDLFile="C:\Users\letap\source\repos\Control Gastos TI 2020\Control 2020\wssp\shp_ws.wsdl"
+              WSTask:OutputLocation="shp_users.xml" xmlns:WSTask="www.microsoft.com/sqlserver/dts/tasks/webservicetask">
+              <WSTask:MethodInfo
+                WSTask:MethodName="GetUserCollectionFromSite"
+                WSTask:MessageName="">
+                <WSTask:Documentation></WSTask:Documentation>
+              </WSTask:MethodInfo>
+            </WSTask:WebServiceTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción]"
+          DTS:CreationName=""
+          DTS:DTSID="{CC27AD28-A593-4981-9B86-B3CAD98A6CE7}"
+          DTS:From="Package\Contenedor de secuencias\Init shp users"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Restricción"
+          DTS:To="Package\Contenedor de secuencias\Tarea Flujo de datos" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{A8902782-F3E6-453B-B68E-D85225619124}"
+          DTS:From="Package\Contenedor de secuencias\Tarea Servicio Web"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Restricción 1"
+          DTS:To="Package\Contenedor de secuencias\Tarea Flujo de datos" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -5591,7 +6397,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Monedas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7219,7 +8025,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Org"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7266,7 +8072,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Parametros"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8404,7 +9210,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init dim PF"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8421,7 +9227,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Periodos"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9498,7 +10304,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Proveedores"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9530,7 +10336,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="148,44"
           Id="Package\Carga Cuentas\Carga Cuentas"
@@ -9539,12 +10345,16 @@
           Size="148,44"
           Id="Package\Carga Cuentas\Init Cuentas"
           TopLeft="7.1666666666667,5.5" />
+        <NodeLayout
+          Size="148,44"
+          Id="Package\Carga Cuentas\update ids shp"
+          TopLeft="7.1666666666667,144.5" />
         <EdgeLayout
           Id="Package\Carga Cuentas.PrecedenceConstraints[Constraint]"
           TopLeft="81.1666666666667,49.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,28"
               Start="0,0"
               End="0,20.5">
@@ -9561,16 +10371,12 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="148,44"
-          Id="Package\Carga Cuentas\update ids shp"
-          TopLeft="7.1666666666667,144.5" />
         <EdgeLayout
           Id="Package\Carga Cuentas.PrecedenceConstraints[Restricción]"
           TopLeft="81.1666666666667,121.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,23"
               Start="0,0"
               End="0,15.5">
@@ -9607,7 +10413,7 @@
           TopLeft="77.2830188679245,52.3962264150943">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,17.811320754717"
               Start="0,0"
               End="0,10.311320754717">
@@ -9644,7 +10450,7 @@
           TopLeft="77.2830188679245,52.3962264150944">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,17.811320754717"
               Start="0,0"
               End="0,10.311320754717">
@@ -9681,7 +10487,7 @@
           TopLeft="75.4339622641509,52.3962264150943">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0.226415094339622,34.5283018867925"
               Start="0,0"
               End="0.226415094339622,27.0283018867925">
@@ -9726,7 +10532,7 @@
           TopLeft="126.528301886792,52.3962264150943">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-51.0943396226415,30.4528301886793"
               Start="0,0"
               End="-51.0943396226415,22.9528301886793">
@@ -9752,7 +10558,7 @@
           TopLeft="126.528301886792,52.3962264150943">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="94.1132075471698,32.5660377358491"
               Start="0,0"
               End="94.1132075471698,25.0660377358491">
@@ -9793,7 +10599,7 @@
           TopLeft="75.9622641509434,52.3962264150944">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-0.528301886792452,27.9622641509434"
               Start="0,0"
               End="-0.528301886792452,20.4622641509434">
@@ -9838,7 +10644,7 @@
           TopLeft="85.8867924528302,53.7169811320755">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,23.811320754717"
               Start="0,0"
               End="0,16.311320754717">
@@ -9860,7 +10666,7 @@
           TopLeft="85.8867924528302,121.528301886793">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,23.8113207547165"
               Start="0,0"
               End="0,16.3113207547165">
@@ -9897,7 +10703,7 @@
           TopLeft="77.2830188679245,52.3962264150943">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,17.811320754717"
               Start="0,0"
               End="0,10.311320754717">
@@ -9921,6 +10727,93 @@
           Size="160,172"
           Id="Package\Proveedores"
           TopLeft="521.952830188679,35.7452830188679" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Contenedor de secuencias\Init shp users"
+          TopLeft="18,12" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Contenedor de secuencias\Tarea Servicio Web"
+          TopLeft="178,15" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos"
+          TopLeft="82,91" />
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción]"
+          TopLeft="89.5,54">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="80.5,37"
+              Start="0,0"
+              End="80.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="76.5,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.5,18.5"
+                    Point2="80.5,18.5"
+                    Point3="80.5,22.5" />
+                  <mssgle:LineSegment
+                    End="80.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias.PrecedenceConstraints[Restricción 1]"
+          TopLeft="263,57">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-65,34"
+              Start="0,0"
+              End="-65,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.2162162162162" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.2162162162162"
+                    Point2="0,20.2162162162162"
+                    Point3="-4,20.2162162162162" />
+                  <mssgle:LineSegment
+                    End="-61,20.2162162162162" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-61,20.2162162162162"
+                    Point2="-65,20.2162162162162"
+                    Point3="-65,24.2162162162162" />
+                  <mssgle:LineSegment
+                    End="-65,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="352,188"
+          Size="352,231"
+          Id="Package\Contenedor de secuencias"
+          TopLeft="706,408" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -10044,7 +10937,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\Ctas en g01"
           TopLeft="241.055555555556,374.388888888889" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 1]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 11]"
           TopLeft="317.833333333333,294.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10124,7 +11017,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\ids null g01"
           TopLeft="608.888888888889,93.3333333333334" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Output1]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Output2]"
           TopLeft="673.194444444444,66.4444444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10150,7 +11043,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\Multidifusión 1"
           TopLeft="600,158.888888888889" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output2]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output3]"
           TopLeft="674.444444444444,135.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10214,7 +11107,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\ids shp g01"
           TopLeft="627.722222222222,288.736897274633" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 11]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 1]"
           TopLeft="695.444444444444,200.888888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10240,7 +11133,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\Unión de todo"
           TopLeft="435.555555555556,442.222222222222" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
           TopLeft="406.388888888889,359.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10274,7 +11167,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada3]"
           TopLeft="626.5,268.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10364,7 +11257,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada3]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
           TopLeft="308.555555555556,416.388888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10436,7 +11329,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
           TopLeft="263.888888888889,461">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10478,7 +11371,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\ids shp g02"
           TopLeft="966.611111111111,436.514675052411" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Output2]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Output1]"
           TopLeft="939.305555555556,167.555555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10500,7 +11393,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output3]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Derived Column Output2]"
           TopLeft="938.888888888889,242">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12128,6 +13021,97 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Proveedores\Carga Proveedores\Graba Proveedores">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Contenedor de secuencias\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\Origen XML"
+          TopLeft="654,47" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\ids"
+          TopLeft="657,198" />
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[User]"
+          TopLeft="720.5,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="10.5,109"
+              Start="0,0"
+              End="10.5,101.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.5"
+                    Point2="0,54.5"
+                    Point3="4,54.5" />
+                  <mssgle:LineSegment
+                    End="6.5,54.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,54.5"
+                    Point2="10.5,54.5"
+                    Point3="10.5,58.5" />
+                  <mssgle:LineSegment
+                    End="10.5,101.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-5.34263671875,59.5,21.1852734375,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB"
+          TopLeft="648,305" />
+        <EdgeLayout
+          Id="Package\Contenedor de secuencias\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+          TopLeft="731.5,240">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contenedor de secuencias\Tarea Flujo de datos\Destino de OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
