@@ -124,9 +124,6 @@
     <Build Include="dbo\Views\view_conv_fcast.sql" />
     <Build Include="dbo\Views\view_forecast.sql" />
     <Build Include="dbo\Views\view_fcast_period.sql" />
-    <Build Include="Security\pmo_user_read.sql" />
-    <Build Include="Security\pmo_user_read_1.sql" />
-    <Build Include="Security\RoleMemberships.sql" />
     <Build Include="dbo\Functions\pep2proy.sql" />
     <Build Include="dbo\Functions\get_parent_id.sql" />
     <Build Include="dbo\Functions\conv_real.sql" />
@@ -152,6 +149,7 @@
     <Build Include="dbo\Stored Procedures\sp_shp_update_ctas.sql" />
     <Build Include="dbo\Functions\lookup_shp.sql" />
     <Build Include="dbo\Stored Procedures\sp_shp_update_forecast.sql" />
+    <Build Include="Security\pmo_user_read.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="sql control 2020.refactorlog" />
