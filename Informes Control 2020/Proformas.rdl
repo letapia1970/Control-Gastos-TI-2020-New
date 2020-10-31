@@ -3,6 +3,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="Control_Gasto_TI_2020">
+      <Transaction>true</Transaction>
       <DataSourceReference>Control Gasto TI 2020</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>a7971ab3-b481-4b4a-98c9-4d03aeb3f158</rd:DataSourceID>
@@ -1151,11 +1152,7 @@ FROM            dim_periodos_facturacion AS fec</CommandText>
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>=DateSerial(
-   datepart("yyyy",Today()),
-   datepart(   "m",Today()),
-   1
-)</Value>
+          <Value>01/03/2020 00:00:00</Value>
         </Values>
       </DefaultValue>
       <Prompt>Periodo</Prompt>
@@ -1163,7 +1160,6 @@ FROM            dim_periodos_facturacion AS fec</CommandText>
         <DataSetReference>
           <DataSetName>Periodos</DataSetName>
           <ValueField>periodo</ValueField>
-          <LabelField>periodo</LabelField>
         </DataSetReference>
       </ValidValues>
     </ReportParameter>

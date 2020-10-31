@@ -12,8 +12,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Gasto Real"
   DTS:PackageType="5"
-  DTS:VersionBuild="156"
-  DTS:VersionGUID="{C7514467-EFF3-4284-8EA2-8F59D462154B}">
+  DTS:VersionBuild="164"
+  DTS:VersionGUID="{87F81B82-A83E-4682-B093-466DAFE4AE29}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -33,11 +33,11 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABiE2KQe/9Dbc7VcZbL9qlPWawEVO4G2lJgic+GvMwDVAAAAAAOgAAAAAIAACAAAAADg+irLo9xpT4kxvacGq66BMcFkJeMJOPnVpjE4EPznBAAAADL7CTpjGTGalv6AFDS54IcQAAAAG4S1KNkY6SqWplta18M6rDJdvDhKTtvVRzOzDwOZWvg91SzOF9anKodvvPkXkEzNW8XFHw3IU+dnJs6s+MDvZM</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABBPjrd4EXcCR155eYpFkbUJdwJazSoTV6coR1Yg/upIgAAAAAOgAAAAAIAACAAAAAb6sCtMuf3c14qlt1RiyLS0699qBjl+JL53RVLcVwulhAAAADxnWqjJAKTCNVFvwHVqegzQAAAAGThcIY5bND0vOXh++sIIfG1rrZPpXOX79OTOthjpCq7g+E+SSF8hbyrhZOajg8oGTwnh3+ZlWeh6VNB14pgxYI</DTS:Property>
             <DTS:Property
               DTS:Name="ProxyPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWkITuB8/S0D87VIttn7KI5vkzHSJZm8kU8aG7kL0f4wAAAAAOgAAAAAIAACAAAABI3ukBvpVrx8idcFYNmEib+3Vb530J1yrDQdCNS5QT4hAAAADGT8I6ntLPPx07Fi1faCi3QAAAALQmWiaHecP9vOqA3Pz46TkKaDW8KnsH/1x+LUNOFFJjb1XpndEIDK/nR1+KpOX0fYk7Wj6z/Cz91JeNIwOXg88</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAATMI7PoRtqrnqBp60ZnsiFuwWaCz6DY4Gr7izzxPdjtwAAAAAOgAAAAAIAACAAAAAe/p9O//IXDh6Uv/hiILrwnIq3U+dXSJjRpD5ulbzGVxAAAAA7NILB2Wd1qNCrahhBcN+TQAAAAG5u1a98+mei4dTkWdktTTJifHzTMV6Qn2t5Q0YlLI5/vm2Tm3/j7t/6UAcpTrV534e11MVf0sQtmGiSNgGuaPc</DTS:Property>
           </DTS:HttpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -650,7 +650,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 0"
-              DTS:DTSID="{3B8009BA-809E-4BCF-BE93-736BC820B225}"
+              DTS:DTSID="{5044D85D-5259-413B-9C9A-7FAB86E68DEC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -659,7 +659,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Def proy "
-              DTS:DTSID="{75C7D65B-87F7-42F2-B97E-86AF69A698A0}"
+              DTS:DTSID="{D3BFC4A5-D94F-4097-B288-D5A03E6EBFFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -668,7 +668,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Name"
-              DTS:DTSID="{E3888CD6-0398-4E32-A467-3D2D06020B14}"
+              DTS:DTSID="{64B7F102-582A-4F8D-BB2D-CBAD3CAD2765}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -677,7 +677,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Status"
-              DTS:DTSID="{CB00099C-7BD9-47A3-9351-0356764A2DB3}"
+              DTS:DTSID="{2299A981-5049-4A0A-B501-08B72A606897}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -686,7 +686,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Fch inicio"
-              DTS:DTSID="{8848DCDB-5F85-412B-8859-34EC222B6596}"
+              DTS:DTSID="{1FC5FD79-9989-4053-AB8C-60FA0FDB8539}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -695,7 +695,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Fecha fin"
-              DTS:DTSID="{DDDE0D19-F0C3-4475-AA2B-5A98368B07F7}"
+              DTS:DTSID="{19223992-E09E-4860-9E3B-0916EDBEA147}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -885,7 +885,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Gasto Real"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5519,7 +5519,7 @@ order by
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Directo (Gasto y Cobro)"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10343,7 +10343,7 @@ order by
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Normas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12403,7 +12403,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="Periodo"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12656,7 +12656,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">3</property>
+                      typeConverter="AccessMode">0</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -12901,7 +12901,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           DTS:LocaleID="-1"
           DTS:ObjectName="Reset pcodes"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14240,7 +14240,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               DTS:LocaleID="-1"
               DTS:ObjectName="Formatea"
               DTS:TaskContact="XML Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <XMLTaskData
@@ -14262,7 +14262,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               DTS:LocaleID="-1"
               DTS:ObjectName="Lee Serie"
               DTS:TaskContact="Web Service Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:PropertyExpression
                 DTS:Name="WsdlFile">@[$Package::LeeSerie_WsdlFile]</DTS:PropertyExpression>
@@ -14323,7 +14323,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               DTS:ExecutableType="Microsoft.ScriptTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Serie as Array"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <ScriptProject
@@ -14528,55 +14528,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
                   <ProjectItem
-                    Name="ScriptMain.vb"
-                    Encoding="UTF8"><![CDATA[' Microsoft SQL Server Integration Services Script Task
-' Write scripts using Microsoft Visual Basic 2008.
-' The ScriptMain is the entry point class of the script.
-
-Imports System
-Imports System.Data
-Imports System.Math
-Imports Microsoft.SqlServer.Dts.Runtime
-
-<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute> _
-<System.CLSCompliantAttribute(False)> _
-Partial Public Class ScriptMain
-	Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
-
-	Enum ScriptResults
-		Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
-		Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
-	End Enum
-	
-
-	' The execution engine calls this method when the task executes.
-	' To access the object model, use the Dts property. Connections, variables, events,
-	' and logging features are available as members of the Dts property as shown in the following examples.
-	'
-	' To reference a variable, call Dts.Variables("MyCaseSensitiveVariableName").Value
-	' To post a log entry, call Dts.Log("This is my log text", 999, Nothing)
-	' To fire an event, call Dts.Events.FireInformation(99, "test", "hit the help message", "", 0, True)
-	'
-	' To use the connections collection use something like the following:
-	' ConnectionManager cm = Dts.Connections.Add("OLEDB")
-	' cm.ConnectionString = "Data Source=localhost;Initial Catalog=AdventureWorks;Provider=SQLNCLI10;Integrated Security=SSPI;Auto Translate=False;"
-	'
-	' Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
-	' 
-	' To open Help, press F1.
-
-	Public Sub Main()
-		'
-		' Add your code here
-        '
-        Dim SerieArr(0) As String
-        SerieArr(0) = Dts.Variables("mon_serie").Value.ToString
-        Dts.Variables("serie_obj").Value = SerieArr
-        Dts.TaskResult = ScriptResults.Success
-	End Sub
-
-End Class]]></ProjectItem>
-                  <ProjectItem
                     Name="My Project\Settings.settings"
                     Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
 <SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
@@ -14645,6 +14596,55 @@ End Class]]></ProjectItem>
     <msb:File Include="My Project\Settings.Designer.vb" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
+                  <ProjectItem
+                    Name="ScriptMain.vb"
+                    Encoding="UTF8"><![CDATA[' Microsoft SQL Server Integration Services Script Task
+' Write scripts using Microsoft Visual Basic 2008.
+' The ScriptMain is the entry point class of the script.
+
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute> _
+<System.CLSCompliantAttribute(False)> _
+Partial Public Class ScriptMain
+	Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+	Enum ScriptResults
+		Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+		Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+	End Enum
+	
+
+	' The execution engine calls this method when the task executes.
+	' To access the object model, use the Dts property. Connections, variables, events,
+	' and logging features are available as members of the Dts property as shown in the following examples.
+	'
+	' To reference a variable, call Dts.Variables("MyCaseSensitiveVariableName").Value
+	' To post a log entry, call Dts.Log("This is my log text", 999, Nothing)
+	' To fire an event, call Dts.Events.FireInformation(99, "test", "hit the help message", "", 0, True)
+	'
+	' To use the connections collection use something like the following:
+	' ConnectionManager cm = Dts.Connections.Add("OLEDB")
+	' cm.ConnectionString = "Data Source=localhost;Initial Catalog=AdventureWorks;Provider=SQLNCLI10;Integrated Security=SSPI;Auto Translate=False;"
+	'
+	' Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+	' 
+	' To open Help, press F1.
+
+	Public Sub Main()
+		'
+		' Add your code here
+        '
+        Dim SerieArr(0) As String
+        SerieArr(0) = Dts.Variables("mon_serie").Value.ToString
+        Dts.Variables("serie_obj").Value = SerieArr
+        Dts.TaskResult = ScriptResults.Success
+	End Sub
+
+End Class]]></ProjectItem>
                   <ProjectItem
                     Name="My Project\Resources.resx"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -15044,7 +15044,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:LocaleID="-1"
           DTS:ObjectName="UF USD"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15073,7 +15073,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:LocaleID="-1"
       DTS:ObjectName="Update USD"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -15624,7 +15624,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Carga Real Por Cuenta de Filial\Triangulado">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
         <NodeLayout
           Size="136,44"
           Id="Package\Carga Real Por Cuenta de Filial\Triangulado\ids"
@@ -15682,7 +15682,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="535.462264150943,377.688679245283">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="63.245283018868,0"
               Start="0,0"
               End="55.745283018868,0">
@@ -15706,7 +15706,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="336.405660377359,377.688679245283">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="63.2830188679245,0"
               Start="0,0"
               End="55.7830188679245,0">
@@ -15730,7 +15730,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="200.632075471698,377.688679245283">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-55.2075471698113,1.58490566037736"
               Start="0,0"
               End="-47.7075471698113,1.58490566037736">
@@ -15758,7 +15758,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="666.594339622642,136.632075471698">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,219.094339622642"
               Start="0,0"
               End="0,211.594339622642">
@@ -15782,7 +15782,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="734.481132075472,377.688679245283">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="63.3584905660377,0"
               Start="0,0"
               End="55.8584905660377,0">
@@ -15806,7 +15806,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="268.518867924528,136.632075471698">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,34.4905660377358"
               Start="0,0"
               End="0,26.9905660377358">
@@ -15830,7 +15830,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="73.1226415094341,299.952830188679">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="195.396226415094,55.7735849056604"
               Start="0,0"
               End="195.396226415094,48.2735849056604">
@@ -15858,7 +15858,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="200.632075471698,285.349056603774">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-59.8867924528302,-7.35849056603773"
               Start="0,0"
               End="-52.3867924528302,-7.35849056603773">
@@ -15886,7 +15886,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="865.72641509434,399.650943396226">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-0.566037735849051,47.2075471698113"
               Start="0,0"
               End="-0.566037735849051,39.7075471698113">
@@ -15914,7 +15914,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="268.518867924528,215.047169811321">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,48.3396226415094"
               Start="0,0"
               End="0,40.8396226415094">
@@ -15938,7 +15938,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="336.405660377359,193.084905660377">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="62.9433962264151,0"
               Start="0,0"
               End="55.4433962264151,0">
@@ -15962,7 +15962,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           TopLeft="268.518867924528,399.650943396226">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="-0.264150943396203,47.2075471698113"
               Start="0,0"
               End="-0.264150943396203,39.7075471698113">
@@ -16691,44 +16691,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="232,42"
           Id="Package\Proyectos\carga def proyectos\Destino de conjunto de registros"
-          TopLeft="727,240" />
+          TopLeft="559,322" />
         <NodeLayout
           Size="136,44"
           Id="Package\Proyectos\carga def proyectos\Def Proyectos"
           TopLeft="467.5,71.5" />
         <EdgeLayout
           Id="Package\Proyectos\carga def proyectos.Paths[OLE DB Destination Error Output]"
-          TopLeft="603.5,249.27358490566">
+          TopLeft="535.5,271.27358490566">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="123.5,11.72641509434"
+              EndConnector="139.5,50.72641509434"
               Start="0,0"
-              End="116,11.72641509434">
+              End="139.5,43.22641509434">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="57.75,0" />
+                    End="0,21.36320754717" />
                   <mssgle:CubicBezierSegment
-                    Point1="57.75,0"
-                    Point2="61.75,0"
-                    Point3="61.75,4" />
+                    Point1="0,21.36320754717"
+                    Point2="0,25.36320754717"
+                    Point3="4,25.36320754717" />
                   <mssgle:LineSegment
-                    End="61.75,7.72641509434001" />
+                    End="135.5,25.36320754717" />
                   <mssgle:CubicBezierSegment
-                    Point1="61.75,7.72641509434001"
-                    Point2="61.75,11.72641509434"
-                    Point3="65.75,11.72641509434" />
+                    Point1="135.5,25.36320754717"
+                    Point2="139.5,25.36320754717"
+                    Point3="139.5,29.36320754717" />
                   <mssgle:LineSegment
-                    End="116,11.72641509434" />
+                    End="139.5,43.22641509434" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-11.45890625,-17.43359375,146.4178125,11.43359375"
+              BoundingBox="-3.45890625,30.36320754717,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16751,9 +16751,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16775,9 +16773,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16804,109 +16800,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="136,44"
           Id="Package\Tipos de Cambio Banco Central\Loop lee tipos de cambio\Carga Moneda\Recordset Destination"
-          TopLeft="146.669811320755,290.254716981132" />
+          TopLeft="394.042452830189,308.254716981132" />
         <NodeLayout
           Size="154,42"
           Id="Package\Tipos de Cambio Banco Central\Loop lee tipos de cambio\Carga Moneda\Derived Column"
-          TopLeft="5.5,100.443396226415" />
+          TopLeft="385.042452830189,119.084905660377" />
         <NodeLayout
           Size="136,44"
           Id="Package\Tipos de Cambio Banco Central\Loop lee tipos de cambio\Carga Moneda\Origen XML"
-          TopLeft="5.5,5.5" />
+          TopLeft="394.042452830189,23.5" />
         <NodeLayout
           Size="136,44"
           Id="Package\Tipos de Cambio Banco Central\Loop lee tipos de cambio\Carga Moneda\Graba tipos de cambio"
-          TopLeft="5.5,195.424528301887" />
+          TopLeft="394.042452830189,212.669811320755" />
         <EdgeLayout
           Id="Package\Tipos de Cambio Banco Central\Loop lee tipos de cambio\Carga Moneda.Paths[OLE DB Destination Error Output]"
-          TopLeft="94.1415094339623,239.349056603774">
+          TopLeft="462.042452830189,256.669811320755">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="120.415094339623,50.9056603773585"
+              EndConnector="0,51.5849056603773"
               Start="0,0"
-              End="120.415094339623,43.4056603773585">
+              End="0,44.0849056603773">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.4339622641509" />
-                  <mssgle:LineSegment
-                    End="120.415094339623,25.4339622641509" />
-                  <mssgle:LineSegment
-                    End="120.415094339623,43.4056603773585" />
+                    End="0,44.0849056603773" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-13.0013590801885,30.4339622641509,146.4178125,11.43359375"
+              BoundingBox="-73.20890625,16.3256559551887,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tipos de Cambio Banco Central\Loop lee tipos de cambio\Carga Moneda.Paths[obs]"
-          TopLeft="73.5,49.5">
+          TopLeft="462.042452830189,67.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="9,50.943396226415"
+              EndConnector="0,51.5849056603773"
               Start="0,0"
-              End="9,43.443396226415">
+              End="0,44.0849056603773">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.4716981132075" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.4716981132075"
-                    Point2="0,25.4716981132075"
-                    Point3="4,25.4716981132075" />
-                  <mssgle:LineSegment
-                    End="5,25.4716981132075" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5,25.4716981132075"
-                    Point2="9,25.4716981132075"
-                    Point3="9,29.4716981132075" />
-                  <mssgle:LineSegment
-                    End="9,43.443396226415" />
+                    End="0,44.0849056603773" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-3.9770703125,30.4716981132075,16.954140625,9.7490234375"
+              BoundingBox="-17.11623046875,14.0424528301887,34.2324609375,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tipos de Cambio Banco Central\Loop lee tipos de cambio\Carga Moneda.Paths[Derived Column Output]"
-          TopLeft="82.5,142.443396226415">
+          TopLeft="462.042452830189,161.084905660377">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="-9,52.981132075472"
+              EndConnector="0,51.5849056603773"
               Start="0,0"
-              End="-9,45.481132075472">
+              End="0,44.0849056603773">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.490566037736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.490566037736"
-                    Point2="0,26.490566037736"
-                    Point3="-4,26.490566037736" />
-                  <mssgle:LineSegment
-                    End="-5,26.490566037736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5,26.490566037736"
-                    Point2="-9,26.490566037736"
-                    Point3="-9,30.490566037736" />
-                  <mssgle:LineSegment
-                    End="-9,45.481132075472" />
+                    End="0,44.0849056603773" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

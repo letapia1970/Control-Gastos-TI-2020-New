@@ -8,7 +8,7 @@
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
           <OmitFromQuery>false</OmitFromQuery>
-          <rd:DbType>DateTime</rd:DbType>
+          <rd:DbType>String</rd:DbType>
         </DataSetParameter>
       </DataSetParameters>
       <CommandType>StoredProcedure</CommandType>

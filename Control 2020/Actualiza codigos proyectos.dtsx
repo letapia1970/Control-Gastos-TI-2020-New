@@ -11,8 +11,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Actualiza codigos proyectos"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{2A017BE8-B8C0-41B3-B0EB-3635930D2DF6}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{92DD2361-1649-430F-9A9B-DC383CF0F1FF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -314,11 +314,11 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Actualiza Codigos\Lee Actas.Connections[Conexión]"
+                  refId="Package\Actualiza Codigos\Lee Actas.Connections[Connection]"
                   connectionManagerID="Package.ConnectionManagers[OData_PMO]"
                   connectionManagerRefId="Package.ConnectionManagers[OData_PMO]"
                   description="Conexión al servicio OData"
-                  name="Conexión" />
+                  name="Connection" />
               </connections>
               <outputs>
                 <output
@@ -836,15 +836,27 @@ order by [Código Ppto]</property>
     design-time-name="Package\Actualiza Codigos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="135,44"
+          Id="Package\Actualiza Codigos\Merge Join"
+          TopLeft="176.745283018868,158.896226415094" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Actualiza Codigos\Lee Actas"
+          TopLeft="5,8" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Actualiza Codigos\Proyectos sin codigo"
+          TopLeft="176.481132075472,82.1792452830189" />
         <NodeLayout
           Size="135,44"
           Id="Package\Actualiza Codigos\Recordset Destination"
           TopLeft="299.707547169811,329.349056603774" />
         <NodeLayout
-          Size="136,44"
-          Id="Package\Actualiza Codigos\Proyectos sin codigo"
-          TopLeft="176.481132075472,82.1792452830189" />
+          Size="135,44"
+          Id="Package\Actualiza Codigos\Sort"
+          TopLeft="5.5,158.896226415094" />
         <NodeLayout
           Size="135,44"
           Id="Package\Actualiza Codigos\Actualiza codigos"
@@ -853,20 +865,12 @@ order by [Código Ppto]</property>
           Size="135,44"
           Id="Package\Actualiza Codigos\Filtro Código"
           TopLeft="5.5,82.1792452830189" />
-        <NodeLayout
-          Size="135,44"
-          Id="Package\Actualiza Codigos\Sort"
-          TopLeft="5.5,158.896226415094" />
-        <NodeLayout
-          Size="135,44"
-          Id="Package\Actualiza Codigos\Merge Join"
-          TopLeft="176.745283018868,158.896226415094" />
         <EdgeLayout
           Id="Package\Actualiza Codigos.Paths[Sort Output]"
           TopLeft="140.745283018868,180.858490566038">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="36,0"
               Start="0,0"
               End="28.5,0">
@@ -884,11 +888,33 @@ order by [Código Ppto]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Actualiza Codigos.Paths[Output]"
+          TopLeft="70,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.1792452830189"
+              Start="0,0"
+              End="0,24.6792452830189">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.6792452830189" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Actualiza Codigos.Paths[OLE DB Source Output]"
           TopLeft="244.367924528302,126.103773584906">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,32.7924528301887"
               Start="0,0"
               End="0,25.2924528301887">
@@ -910,7 +936,7 @@ order by [Código Ppto]</property>
           TopLeft="244.245283018868,276.971698113208">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="122.962264150943,52.3773584905661"
               Start="0,0"
               End="122.962264150943,44.8773584905661">
@@ -946,7 +972,7 @@ order by [Código Ppto]</property>
           TopLeft="244.367924528302,202.820754716981">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,30.1509433962264"
               Start="0,0"
               End="0,22.6509433962264">
@@ -968,7 +994,7 @@ order by [Código Ppto]</property>
           TopLeft="73.122641509434,126.103773584906">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="0,32.7924528301887"
               Start="0,0"
               End="0,25.2924528301887">
@@ -985,32 +1011,6 @@ order by [Código Ppto]</property>
             <mssgm:EdgeLabel
               BoundingBox="-25.88455078125,6.52171469634435,51.7691015625,12.2490234375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="124,42"
-          Id="Package\Actualiza Codigos\Lee Actas"
-          TopLeft="5,8" />
-        <EdgeLayout
-          Id="Package\Actualiza Codigos.Paths[Output]"
-          TopLeft="70,50">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,32.1792452830189"
-              Start="0,0"
-              End="0,24.6792452830189">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.6792452830189" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
