@@ -12,6 +12,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
+	SET DATEFORMAT 'YMD';
     delete from dim_periodos_facturacion;
 	insert into dim_periodos_facturacion (periodo,desde,hasta)
 		select * from view_periodos_facturacion;

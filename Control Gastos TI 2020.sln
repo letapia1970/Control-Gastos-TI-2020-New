@@ -17,6 +17,7 @@ Global
 		DebugLocal|Any CPU = DebugLocal|Any CPU
 		Dev ds192|Any CPU = Dev ds192|Any CPU
 		Development|Any CPU = Development|Any CPU
+		QAS ds193|Any CPU = QAS ds193|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -32,6 +33,8 @@ Global
 		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.Development|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.Development|Any CPU.Build.0 = Debug|Any CPU
 		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.Development|Any CPU.Deploy.0 = Debug|Any CPU
+		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.QAS ds193|Any CPU.ActiveCfg = QAS ds193|Any CPU
+		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.QAS ds193|Any CPU.Deploy.0 = QAS ds193|Any CPU
 		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D3C7DD7-AD86-4D91-83CB-AA54C9EA7C5E}.Release|Any CPU.Deploy.0 = Release|Any CPU
@@ -43,6 +46,8 @@ Global
 		{FCB72E61-F998-40D9-A256-363870AFB60B}.Dev ds192|Any CPU.Build.0 = Dev ds192
 		{FCB72E61-F998-40D9-A256-363870AFB60B}.Development|Any CPU.ActiveCfg = Development
 		{FCB72E61-F998-40D9-A256-363870AFB60B}.Development|Any CPU.Build.0 = Development
+		{FCB72E61-F998-40D9-A256-363870AFB60B}.QAS ds193|Any CPU.ActiveCfg = QAS ds193
+		{FCB72E61-F998-40D9-A256-363870AFB60B}.QAS ds193|Any CPU.Build.0 = QAS ds193
 		{FCB72E61-F998-40D9-A256-363870AFB60B}.Release|Any CPU.ActiveCfg = Development
 		{FCB72E61-F998-40D9-A256-363870AFB60B}.Release|Any CPU.Build.0 = Development
 		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.Debug|Any CPU.ActiveCfg = Development
@@ -56,6 +61,9 @@ Global
 		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.Development|Any CPU.ActiveCfg = Development
 		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.Development|Any CPU.Build.0 = Development
 		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.Development|Any CPU.Deploy.0 = Development
+		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.QAS ds193|Any CPU.ActiveCfg = QAS ds193
+		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.QAS ds193|Any CPU.Build.0 = QAS ds193
+		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.QAS ds193|Any CPU.Deploy.0 = QAS ds193
 		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.Release|Any CPU.ActiveCfg = Development
 		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.Release|Any CPU.Build.0 = Development
 		{F6D3FE9F-1E7E-4FA9-B2FC-9FF205BA4EBE}.Release|Any CPU.Deploy.0 = Development
@@ -70,6 +78,7 @@ Global
 		{874E6B96-EE48-4B88-857D-1A0868C4445E}.Development|Any CPU.ActiveCfg = Debug
 		{874E6B96-EE48-4B88-857D-1A0868C4445E}.Development|Any CPU.Build.0 = Debug
 		{874E6B96-EE48-4B88-857D-1A0868C4445E}.Development|Any CPU.Deploy.0 = Debug
+		{874E6B96-EE48-4B88-857D-1A0868C4445E}.QAS ds193|Any CPU.ActiveCfg = QAS ds193
 		{874E6B96-EE48-4B88-857D-1A0868C4445E}.Release|Any CPU.ActiveCfg = Release
 		{874E6B96-EE48-4B88-857D-1A0868C4445E}.Release|Any CPU.Build.0 = Release
 		{874E6B96-EE48-4B88-857D-1A0868C4445E}.Release|Any CPU.Deploy.0 = Release

@@ -314,11 +314,11 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Actualiza Codigos\Lee Actas.Connections[Connection]"
+                  refId="Package\Actualiza Codigos\Lee Actas.Connections[Conexión]"
                   connectionManagerID="Package.ConnectionManagers[OData_PMO]"
                   connectionManagerRefId="Package.ConnectionManagers[OData_PMO]"
                   description="Conexión al servicio OData"
-                  name="Connection" />
+                  name="Conexión" />
               </connections>
               <outputs>
                 <output
