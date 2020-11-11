@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">NBLTP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAACAAAAAAAQZgAAAAEAACAAAAAPEP7hIZimPfERdAw17y1DjvVPp2a9w5TWxbt4JGzpjAAAAAAOgAAAAAIAACAAAAC6YOXW37ngwth23m/5+G/JvDlUx+sTzI77GzXAuY1H6ZAAAADhJrtiM4qpjxKvxBzEgjPTd7dQY3Unp5Hw15MElHq9nRd+waU2dp+FCqS6CSnbY5+rZSdZu3ROER1DIq6xxNlfEQ3WHiZJXCF5rrTnfJssNTZ8mnekkLjRU4G45PhT7W0rNUOah8irNs5WyJk33JG3Khb9OtqHZNaktzuiGUFpOzdWK3OeQika/7zHMh4zaQtAAAAA0m5CpslB5pOBdWZa/r4dXJquqzrCvxD8Zy2Y4Q/E5V5t1szLXo9R/HrpWyGRkwJ49ZSyt/puqhWH2TEXpW9mbg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAACAAAAAAAQZgAAAAEAACAAAACWBjVym4pcDANREq+2tdG+NaBfs/hYVupbztuRXDQURQAAAAAOgAAAAAIAACAAAACm2KcsEQ9kvgRcqyf5p2xo8b/HdAD5l1zs8Xp6Mz8eZ5AAAADb23fNFDkEwYmc76Ty2PdxefDx2FJeUIqWSc2DUQwiiJwoomlTZZMisOQ9Q0TLBcKwFNZF+JnhggMqIVmYixs/tqTwlXzxcAYpijmablUcehj4Q9Sd4BBEPTbfMjAsleXYLF39lb5jrYOUrhuRjKIbaaBaIDOAyvBAuPDuxGknMojbdIJ8D1aMtWf6ewiIF/VAAAAAzO3hEeIeiV9C6915+E92YnpEP45k8K60cNOlHQezSOr5t+/cv0H7EVymdZsextQMBfs9Oy2blii7GHqE1ZtpkQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,6 +35,7 @@
           <SSIS:Package SSIS:Name="Gasto Real.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Actualiza codigos proyectos.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Carga Forecast.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Descarga SAP.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Control_2020.conmgr" />
@@ -1072,8 +1073,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1133,8 +1132,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1163,8 +1160,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1179,8 +1174,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1480,8 +1473,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2846,6 +2837,63 @@
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Descarga SAP.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{8D412479-6F7B-44AE-B5B1-ED330E5BAFE7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Descarga SAP</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">39</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3FFF1AB0-99AA-41E2-8B70-1A7C43EDB49B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="dest_path">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{0D340657-4AA0-45DA-A38D-10E59F09619E}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Carpeta donde se graban los archivos. Luego se suben a Sharepoint</SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">c:\temp</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{649EDD07-D65A-4831-BD4E-EDA06E02033D}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">Password del usuario SAP</SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAACAAAAAAAQZgAAAAEAACAAAABAYBd31gl8VFxnX9vLu++fVkAHzipZ8p5j3dyUWPf1PgAAAAAOgAAAAAIAACAAAABw/x5Up9+RYrSZoyN3xjXwS//3Z5NAHHuiRREntm3wWIAAAAD3kz935Vx1Qyix5VKMofYqT7xzVdNTvrCH31LoSfO6vBQCEd/au/IX3BygDk5P3k+fxU9XORh4UDAgKlHcSnmIYnG+l5crq/Xccxx6SqejGz59o10MWVy7bsdJCPWmZY8wy1w9ST8VB0MB8daZg0wCwT2F8O6AU6hm/C6xGl7dxEAAAABBl5/g7hhBPtaBYV+mZjTnqt6fbxgH58Dnb5oY0fVNcvFfNl4Y4gBeF7s/Z9bSukbwaxnxUPA7z/K6IgdYF9eu</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="user">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{FE14E3B9-538D-4C6D-AF6F-A3D483A4C686}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">login del usuario SAP</SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">ltapiap</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
