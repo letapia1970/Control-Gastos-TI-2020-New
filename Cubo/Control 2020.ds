@@ -1,9 +1,9 @@
-﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="56e81efb-e0ee-4de8-8cc4-1fc78945582f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="c7c78520-a453-4422-9ade-dcf511b72ce8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Control 2020</ID>
   <Name>Control 2020</Name>
   <CreatedTimestamp>2020-01-10T16:52:54.983333Z</CreatedTimestamp>
   <LastSchemaUpdate>2020-05-19T22:10:46.733333Z</LastSchemaUpdate>
-  <ConnectionString>Provider=MSOLEDBSQL.1;Data Source=(localdb)\MSSQLLocalDB;Integrated Security=SSPI;Initial Catalog=PMO Control Gasto TI 2020 DEV New</ConnectionString>
+  <ConnectionString>Provider=MSOLEDBSQL.1;Data Source=cmpc-ds193.cmpc.cl;Integrated Security=SSPI;Initial Catalog=Control Gasto TI 2020 QAS</ConnectionString>
   <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
   <ImpersonationInfo>
     <ImpersonationMode>Default</ImpersonationMode>
@@ -11,14 +11,14 @@
   </ImpersonationInfo>
   <Timeout>PT0S</Timeout>
   <DataSourcePermissions>
-    <DataSourcePermission dwd:design-time-name="54cdac4b-634e-4da3-b74a-1dfa6813c42d">
+    <DataSourcePermission dwd:design-time-name="60be73fb-936c-4daa-a060-0d8ca433dc48">
       <ID>DataSourcePermission</ID>
       <Name>DataSourcePermission</Name>
       <CreatedTimestamp>2020-02-05T12:39:05.886667Z</CreatedTimestamp>
       <LastSchemaUpdate>2020-05-19T22:10:46.78Z</LastSchemaUpdate>
       <RoleID>Role 2</RoleID>
     </DataSourcePermission>
-    <DataSourcePermission dwd:design-time-name="3f31f1a1-05bd-4f34-83ca-1235fe256fe2">
+    <DataSourcePermission dwd:design-time-name="dd4992e4-d14b-47a0-9156-c10f542f8d89">
       <ID>DataSourcePermission 1</ID>
       <Name>DataSourcePermission 1</Name>
       <CreatedTimestamp>2020-09-15T22:52:53.33Z</CreatedTimestamp>

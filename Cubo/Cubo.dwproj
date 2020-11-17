@@ -182,7 +182,7 @@
           <ConfigurationSetting>
             <Id>Control 2020</Id>
             <Name>Control 2020</Name>
-            <Value xsi:type="xsd:string">Provider=MSOLEDBSQL.1;Data Source=(localdb)\MSSQLLocalDB;Integrated Security=SSPI;Initial Catalog=PMO Control Gasto TI 2020 DEV New</Value>
+            <Value xsi:type="xsd:string">Provider=MSOLEDBSQL.1;Data Source=cmpc-ds193.cmpc.cl;Integrated Security=SSPI;Initial Catalog=Control Gasto TI 2020 QAS</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

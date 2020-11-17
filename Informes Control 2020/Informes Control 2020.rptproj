@@ -8,9 +8,9 @@
     <OverwriteDataSources>True</OverwriteDataSources>
     <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
-    <TargetReportFolder>Facturación</TargetReportFolder>
-    <TargetDatasetFolder>Facturación</TargetDatasetFolder>
-    <TargetDatasourceFolder>Facturación</TargetDatasourceFolder>
+    <TargetReportFolder>Facturación New</TargetReportFolder>
+    <TargetDatasetFolder>Facturación New</TargetDatasetFolder>
+    <TargetDatasourceFolder>Facturación New</TargetDatasourceFolder>
     <TargetReportPartFolder>Elementos de informe</TargetReportPartFolder>
     <TargetServerURL>http://cmpc-ds192.cmpc.cl/reportserver</TargetServerURL>
   </PropertyGroup>
@@ -49,6 +49,7 @@
     <OverwriteDatasets>True</OverwriteDatasets>
     <OverwriteDataSources>True</OverwriteDataSources>
     <TargetServerVersion>SSRS2016</TargetServerVersion>
+    <Platform />
     <TargetReportFolder>Facturación</TargetReportFolder>
     <TargetDatasetFolder>Facturación</TargetDatasetFolder>
     <TargetDatasourceFolder>Facturación</TargetDatasourceFolder>

@@ -12,8 +12,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Carga Maestros"
   DTS:PackageType="5"
-  DTS:VersionBuild="134"
-  DTS:VersionGUID="{3AF90332-BDEE-4C5F-9149-438C8C8F458C}">
+  DTS:VersionBuild="135"
+  DTS:VersionGUID="{42E6B931-EA8E-4477-9E72-A953CE623F34}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -34,20 +34,20 @@
       DTS:ObjectName="Shp_ws">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="http://sppmo.cmpc.cl/ppto2020/control_qas/_vti_bin/UserGroup.asmx?wsdl">
+          DTS:ConnectionString="http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/UserGroup.asmx?wsdl">
           <DTS:HttpConnection
-            DTS:ServerURL="http://sppmo.cmpc.cl/ppto2020/control_qas/_vti_bin/UserGroup.asmx?wsdl"
+            DTS:ServerURL="http://sppmo.cmpc.cl/ppto2020/control_dev/_vti_bin/UserGroup.asmx?wsdl"
             DTS:UseServerCredentials="True"
             DTS:ServerUserName="ltapia"
             DTS:ServerDomain="cmpc">
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+xIuPZsDIgu8C0HT5gsBqFYebFhh5+5VKKY9iGjBTRQAAAAAOgAAAAAIAACAAAACQcr4Emt/NHs9l+JLLpayQvXqh9lzyhIeFALN3JPepHyAAAABXhAsp4l/97RbmNL7q5dw2pCCBGDzQpKQKu15kGLth/UAAAABdEzTlmwj3bXDV9to8gY5kwkJ64F0JU75xwdvsKU5fRESrKa58qI0OceNC/yAwzMzJGle6AQcVtOmxECXbAIPT</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8e5gZvF8ZpwlemtMOtzrIAIjZcUse2Q77fORw6MinkQAAAAAOgAAAAAIAACAAAABNQx3Xt+H1bJVfj2lmlJQW/y6Gkzly57qiXbxOxficFSAAAAB2UlV0KxSITEodjbKVrqt1bGlubTMuIZlDLVTUXNm/xkAAAACUzpmxkOdE/2HFQekz2t60j0+9bBCk/m2a6qq2RxrQ/jN0XCIE4jRf+GHZ/FTrP9nRPxfo9IYHTQCPxSZqGiqz</DTS:Property>
             <DTS:Property
               DTS:Name="ProxyPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB94h9uUuIItazM8Uz8+AnIbn63IbiyOdVwHaAZiJRQrAAAAAAOgAAAAAIAACAAAADqK32aPyBymabyB4yOlHhCaxiDsEwpgVtmnaQGhFnIYxAAAADVmi8QRX3OcEyqZH/tZXsKQAAAAKhBHJqC1/Gsgzh7FOA2SusaGpuMv4GduKJKquj1BjkruOUc9LDaEjzIX54t8YcccG/3J1XpZd6umH49wNT8gxI</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD7o3a8ufTRIKgMcjTCEGsP6qGewXfzp2ADtnThqrAVVAAAAAAOgAAAAAIAACAAAAAju/ugiBjIwZ7q+yCMbUFAJrED1VpMQ+YrGhFoZMizWxAAAACh6DNSp0AJUNm1V/le15rRQAAAAPAcQtEbY9KrprY3VZdH7NXdqEVQ8p6WmEiUO9IUa64j0Kxi++RN91dzmKGgMP4pTcGa1+QffQENts831CkJlWk</DTS:Property>
           </DTS:HttpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -2902,19 +2902,19 @@
                   startId="Package\Carga Cuentas\Carga Cuentas\Lee Grupo 01.Outputs[Output]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 7]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 5]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g02.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids_shp.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 6]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 1]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids g02.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 4]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g02.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada3]"
                   endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 3]"
@@ -2922,19 +2922,19 @@
                   startId="Package\Carga Cuentas\Carga Cuentas\ids g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada2]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 4]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 2]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g02.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 6]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g01.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids g02.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 5]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 7]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids_shp.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g02.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 1]"
                   endId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Inputs[Entrada de columna derivada]"
@@ -3798,7 +3798,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init shp users"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3815,7 +3815,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ws users Shp"
           DTS:TaskContact="Web Service Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="WsdlFile">@[$Package::TareaServicioWeb_WsdlFile]</DTS:PropertyExpression>
@@ -4846,7 +4846,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Categorias"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5551,7 +5551,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init cecos control"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6475,7 +6475,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Monedas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8039,7 +8039,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Org"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8086,7 +8086,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Parametros"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9224,7 +9224,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init dim PF"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9241,7 +9241,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Periodos"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10318,7 +10318,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Proveedores"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10913,7 +10913,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\ids_shp"
           TopLeft="148.888888888889,437.777777777778" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada2]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
           TopLeft="694.222222222222,330.736897274633">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10949,7 +10949,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
           TopLeft="308.555555555556,416.388888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10985,7 +10985,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
           TopLeft="263.888888888889,461">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11453,7 +11453,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
           TopLeft="966.611111111111,460.368448637317">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11477,7 +11477,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
           TopLeft="923.166666666667,415.333333333334">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11513,7 +11513,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada2]"
           TopLeft="406.388888888889,359.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
