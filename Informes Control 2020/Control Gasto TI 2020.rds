@@ -3,7 +3,6 @@
   <ConnectionProperties>
     <Extension>SQL</Extension>
     <ConnectString>Data Source=(localdb)\MSSQLLocalDB;Initial Catalog="PMO Control Gasto TI 2020 DEV New"</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>f66c87d1-ba90-4f7f-9960-da81d6d3844b</DataSourceID>
 </RptDataSource>
