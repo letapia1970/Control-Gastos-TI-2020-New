@@ -12,8 +12,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Carga Maestros"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{42E6B931-EA8E-4477-9E72-A953CE623F34}">
+  DTS:VersionBuild="137"
+  DTS:VersionGUID="{BB2F6CB6-2D2A-410A-B947-FE9018F48C87}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -43,11 +43,11 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8e5gZvF8ZpwlemtMOtzrIAIjZcUse2Q77fORw6MinkQAAAAAOgAAAAAIAACAAAABNQx3Xt+H1bJVfj2lmlJQW/y6Gkzly57qiXbxOxficFSAAAAB2UlV0KxSITEodjbKVrqt1bGlubTMuIZlDLVTUXNm/xkAAAACUzpmxkOdE/2HFQekz2t60j0+9bBCk/m2a6qq2RxrQ/jN0XCIE4jRf+GHZ/FTrP9nRPxfo9IYHTQCPxSZqGiqz</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADkP6avbAYG/nex4c4GTn4O6TE6LLqcNE8QxAHWH68EjAAAAAAOgAAAAAIAACAAAABNIJzOM+7cyy+rEXh0L9Uzi1j4GJ0I/1qYu0pgxSIYTSAAAACYa7z7rm/cKWEd4zMcB+75tR1gstSK/PpQ1mqBrkY8KEAAAAAKFHeqxfkcYjyS1/IDIODxgRjYzhaCjnqL8DVg72tKwzTgeqCL4nRcehyNpWdX0P5llsodqz3jSVgAVYLihvk8</DTS:Property>
             <DTS:Property
               DTS:Name="ProxyPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD7o3a8ufTRIKgMcjTCEGsP6qGewXfzp2ADtnThqrAVVAAAAAAOgAAAAAIAACAAAAAju/ugiBjIwZ7q+yCMbUFAJrED1VpMQ+YrGhFoZMizWxAAAACh6DNSp0AJUNm1V/le15rRQAAAAPAcQtEbY9KrprY3VZdH7NXdqEVQ8p6WmEiUO9IUa64j0Kxi++RN91dzmKGgMP4pTcGa1+QffQENts831CkJlWk</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAldPu2nHETUOSJ3RvUpyj4QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAeJ4VOnBnWG1tpcSMyshcB5jCQhj3U+Wpmo1YTCVnqawAAAAAOgAAAAAIAACAAAAAY75RFfSakSawXBMHjATwTOvOi8vTUnJijgXhx+8ldPBAAAAA+mTOWZBOB5Wj6fy3AXxzlQAAAALsbJ94/QwOO5RM5ZfBtHwN/mboQjCbFbVNnnLMx3NnF0DnNnMRMueFTQC4l6Xx8TLEDcc23Nf9giUEJ9N0KYCs</DTS:Property>
           </DTS:HttpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -1460,7 +1460,7 @@
                       dataType="System.String"
                       description="Consulta en la dirección URL. "
                       expressionType="Notify"
-                      name="Query"></property>
+                      name="Query">$select=Cta_id,Descripción,Grupo01Id,Grupo02Id,Identificador</property>
                     <property
                       dataType="System.String"
                       description="Ruta de acceso a recursos de la colección que se recuperará del servicio."
@@ -1491,42 +1491,53 @@
                         <outputColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Cta_id]"
                           dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Cta_id]"
                           length="50"
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Cta_id]"
-                          name="Cta_id" />
+                          name="Cta_id"
+                          truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Descripción]"
                           dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Descripción]"
                           length="255"
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Descripción]"
-                          name="Descripción" />
+                          name="Descripción"
+                          truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Grupo01Id]"
                           dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Grupo01Id]"
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Grupo01Id]"
-                          name="Grupo01Id" />
+                          name="Grupo01Id"
+                          truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Grupo02Id]"
                           dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Grupo02Id]"
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Grupo02Id]"
-                          name="Grupo02Id" />
+                          name="Grupo02Id"
+                          truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Identificador]"
                           dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Identificador]"
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].Columns[Identificador]"
-                          name="Identificador" />
+                          name="Identificador"
+                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[IdDeTiposDeContenido]"
-                          dataType="nText"
-                          name="IdDeTiposDeContenido" />
                         <externalMetadataColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Cta_id]"
                           dataType="nText"
@@ -1544,49 +1555,9 @@
                           dataType="i4"
                           name="Grupo02Id" />
                         <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Cuenta]"
-                          dataType="nText"
-                          name="Cuenta" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Descripcion]"
-                          dataType="nText"
-                          name="Descripcion" />
-                        <externalMetadataColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Identificador]"
                           dataType="i4"
                           name="Identificador" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[TipoDeContenido]"
-                          dataType="nText"
-                          name="TipoDeContenido" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Modificado]"
-                          dataType="dbTimeStamp"
-                          name="Modificado" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Creado]"
-                          dataType="dbTimeStamp"
-                          name="Creado" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[CreadoPorId]"
-                          dataType="i4"
-                          name="CreadoPorId" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[ModificadoPorId]"
-                          dataType="i4"
-                          name="ModificadoPorId" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Owshiddenversion]"
-                          dataType="i4"
-                          name="Owshiddenversion" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[Versión]"
-                          dataType="nText"
-                          name="Versión" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Output].ExternalColumns[RutaDeAcceso]"
-                          dataType="nText"
-                          name="RutaDeAcceso" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -1606,11 +1577,6 @@
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[IdDeTiposDeContenido]"
-                          dataType="nText"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[IdDeTiposDeContenido]"
-                          name="IdDeTiposDeContenido" />
                         <outputColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Cta_id]"
                           dataType="nText"
@@ -1632,60 +1598,10 @@
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Grupo02Id]"
                           name="Grupo02Id" />
                         <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Cuenta]"
-                          dataType="nText"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Cuenta]"
-                          name="Cuenta" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Descripcion]"
-                          dataType="nText"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Descripcion]"
-                          name="Descripcion" />
-                        <outputColumn
                           refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Identificador]"
                           dataType="i4"
                           lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Identificador]"
                           name="Identificador" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[TipoDeContenido]"
-                          dataType="nText"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[TipoDeContenido]"
-                          name="TipoDeContenido" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Modificado]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Modificado]"
-                          name="Modificado" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Creado]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Creado]"
-                          name="Creado" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[CreadoPorId]"
-                          dataType="i4"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[CreadoPorId]"
-                          name="CreadoPorId" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[ModificadoPorId]"
-                          dataType="i4"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[ModificadoPorId]"
-                          name="ModificadoPorId" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Owshiddenversion]"
-                          dataType="i4"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Owshiddenversion]"
-                          name="Owshiddenversion" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Versión]"
-                          dataType="nText"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[Versión]"
-                          name="Versión" />
-                        <outputColumn
-                          refId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[RutaDeAcceso]"
-                          dataType="nText"
-                          lineageId="Package\Carga Cuentas\Carga Cuentas\Lee Cuentas.Outputs[Error output].Columns[RutaDeAcceso]"
-                          name="RutaDeAcceso" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -2902,19 +2818,19 @@
                   startId="Package\Carga Cuentas\Carga Cuentas\Lee Grupo 01.Outputs[Output]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 5]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 7]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids_shp.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g02.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 6]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g01.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids g02.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 4]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 2]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g02.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada3]"
                   endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 3]"
@@ -2922,19 +2838,19 @@
                   startId="Package\Carga Cuentas\Carga Cuentas\ids g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada2]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 4]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g02.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 6]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 1]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids g02.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\Ctas en g01.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
-                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 7]"
+                  endId="Package\Carga Cuentas\Carga Cuentas\Unión de todo.Inputs[Entrada de Unión de todo 5]"
                   name="Salida de columna derivada"
-                  startId="Package\Carga Cuentas\Carga Cuentas\ids shp g02.Outputs[Salida de columna derivada]" />
+                  startId="Package\Carga Cuentas\Carga Cuentas\ids_shp.Outputs[Salida de columna derivada]" />
                 <path
                   refId="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de multidifusión 1]"
                   endId="Package\Carga Cuentas\Carga Cuentas\ids shp g01.Inputs[Entrada de columna derivada]"
@@ -2988,7 +2904,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Cuentas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3005,7 +2921,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="update ids shp"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3798,7 +3714,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init shp users"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3815,7 +3731,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ws users Shp"
           DTS:TaskContact="Web Service Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="WsdlFile">@[$Package::TareaServicioWeb_WsdlFile]</DTS:PropertyExpression>
@@ -4846,7 +4762,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Categorias"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5551,7 +5467,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init cecos control"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6475,7 +6391,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Monedas"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8039,7 +7955,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Org"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8086,7 +8002,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Borra Parametros"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9224,7 +9140,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init dim PF"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9241,7 +9157,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Periodos"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9780,7 +9696,7 @@
                       dataType="System.String"
                       description="Consulta en la dirección URL. "
                       expressionType="Notify"
-                      name="Query"></property>
+                      name="Query">$select=Acreedor,NombreCorto,Identificador,NombreDelProveedor</property>
                     <property
                       dataType="System.String"
                       description="Ruta de acceso a recursos de la colección que se recuperará del servicio."
@@ -9811,37 +9727,45 @@
                         <outputColumn
                           refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[Acreedor]"
                           dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Acreedor]"
                           length="50"
                           lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[Acreedor]"
-                          name="Acreedor" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[NombreCorto]"
-                          dataType="wstr"
-                          externalMetadataColumnId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[NombreCorto]"
-                          length="255"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[NombreCorto]"
-                          name="NombreCorto" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[Identificador]"
-                          dataType="i4"
-                          externalMetadataColumnId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Identificador]"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[Identificador]"
-                          name="Identificador" />
+                          name="Acreedor"
+                          truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[NombreDelProveedor]"
                           dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[NombreDelProveedor]"
                           length="255"
                           lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[NombreDelProveedor]"
-                          name="NombreDelProveedor" />
+                          name="NombreDelProveedor"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[NombreCorto]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[NombreCorto]"
+                          length="255"
+                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[NombreCorto]"
+                          name="NombreCorto"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[Identificador]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Identificador]"
+                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].Columns[Identificador]"
+                          name="Identificador"
+                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[IdDeTiposDeContenido]"
-                          dataType="nText"
-                          name="IdDeTiposDeContenido" />
                         <externalMetadataColumn
                           refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Acreedor]"
                           dataType="nText"
@@ -9855,45 +9779,9 @@
                           dataType="nText"
                           name="NombreCorto" />
                         <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Nombre]"
-                          dataType="nText"
-                          name="Nombre" />
-                        <externalMetadataColumn
                           refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Identificador]"
                           dataType="i4"
                           name="Identificador" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[TipoDeContenido]"
-                          dataType="nText"
-                          name="TipoDeContenido" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Modificado]"
-                          dataType="dbTimeStamp"
-                          name="Modificado" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Creado]"
-                          dataType="dbTimeStamp"
-                          name="Creado" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[CreadoPorId]"
-                          dataType="i4"
-                          name="CreadoPorId" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[ModificadoPorId]"
-                          dataType="i4"
-                          name="ModificadoPorId" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Owshiddenversion]"
-                          dataType="i4"
-                          name="Owshiddenversion" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[Versión]"
-                          dataType="nText"
-                          name="Versión" />
-                        <externalMetadataColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Output].ExternalColumns[RutaDeAcceso]"
-                          dataType="nText"
-                          name="RutaDeAcceso" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -9914,11 +9802,6 @@
                           name="ErrorColumn"
                           specialFlags="2" />
                         <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[IdDeTiposDeContenido]"
-                          dataType="nText"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[IdDeTiposDeContenido]"
-                          name="IdDeTiposDeContenido" />
-                        <outputColumn
                           refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Acreedor]"
                           dataType="nText"
                           lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Acreedor]"
@@ -9934,55 +9817,10 @@
                           lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[NombreCorto]"
                           name="NombreCorto" />
                         <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Nombre]"
-                          dataType="nText"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Nombre]"
-                          name="Nombre" />
-                        <outputColumn
                           refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Identificador]"
                           dataType="i4"
                           lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Identificador]"
                           name="Identificador" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[TipoDeContenido]"
-                          dataType="nText"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[TipoDeContenido]"
-                          name="TipoDeContenido" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Modificado]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Modificado]"
-                          name="Modificado" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Creado]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Creado]"
-                          name="Creado" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[CreadoPorId]"
-                          dataType="i4"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[CreadoPorId]"
-                          name="CreadoPorId" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[ModificadoPorId]"
-                          dataType="i4"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[ModificadoPorId]"
-                          name="ModificadoPorId" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Owshiddenversion]"
-                          dataType="i4"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Owshiddenversion]"
-                          name="Owshiddenversion" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Versión]"
-                          dataType="nText"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[Versión]"
-                          name="Versión" />
-                        <outputColumn
-                          refId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[RutaDeAcceso]"
-                          dataType="nText"
-                          lineageId="Package\Proveedores\Carga Proveedores\Lee Proveedores.Outputs[Error output].Columns[RutaDeAcceso]"
-                          name="RutaDeAcceso" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -10318,7 +10156,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Init Proveedores"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10835,7 +10673,7 @@
     design-time-name="Package\Carga Cuentas\Carga Cuentas">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="133,42"
           Id="Package\Carga Cuentas\Carga Cuentas\ids null g02"
@@ -10913,7 +10751,7 @@
           Id="Package\Carga Cuentas\Carga Cuentas\ids_shp"
           TopLeft="148.888888888889,437.777777777778" />
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada2]"
           TopLeft="694.222222222222,330.736897274633">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10943,13 +10781,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
           TopLeft="308.555555555556,416.388888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10979,13 +10815,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
           TopLeft="263.888888888889,461">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11003,9 +10837,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11027,9 +10859,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11051,9 +10881,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11075,9 +10903,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11099,9 +10925,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11123,9 +10947,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11159,9 +10981,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11195,9 +11015,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11219,9 +11037,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11255,9 +11071,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11291,9 +11105,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11327,9 +11139,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11351,9 +11161,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11387,9 +11195,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11423,9 +11229,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11447,13 +11251,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada6]"
           TopLeft="966.611111111111,460.368448637317">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11471,13 +11273,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada1]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada5]"
           TopLeft="923.166666666667,415.333333333334">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11507,13 +11307,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada2]"
+          Id="Package\Carga Cuentas\Carga Cuentas.Paths[Salida de columna derivada4]"
           TopLeft="406.388888888889,359.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11543,9 +11341,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11579,9 +11375,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11660,7 +11454,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12825,9 +12621,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12885,9 +12679,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12910,7 +12702,7 @@
     design-time-name="Package\Proveedores\Carga Proveedores">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="157,42"
           Id="Package\Proveedores\Carga Proveedores\Lee Proveedores"
@@ -12958,9 +12750,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12994,9 +12784,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13030,9 +12818,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13066,9 +12852,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13102,9 +12886,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13138,9 +12920,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13162,9 +12942,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
